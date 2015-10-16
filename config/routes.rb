@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
   get 'static_pages/about'
 
-  # devise_for :children
-  # devise_for :parents
+  devise_for :children
+  devise_for :parents
 
   root 'static_pages#home'
 
