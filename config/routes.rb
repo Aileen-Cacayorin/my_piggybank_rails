@@ -5,12 +5,12 @@ Rails.application.routes.draw do
 
   get 'static_pages/about'
 
-  devise_for :children
-  devise_for :parents
+
 
   root 'static_pages#home'
 
-
+  devise_for :children
+  devise_for :parents
 
   resources :parents do
     resources :banks

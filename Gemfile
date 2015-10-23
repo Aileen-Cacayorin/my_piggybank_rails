@@ -16,6 +16,7 @@ gem 'carrierwave', '0.10.0'
 gem 'devise'
 gem 'mini_magick',             '3.8.0'
 
+
 group :production do
   gem 'puma'
   gem 'rails_12factor'
@@ -40,4 +41,6 @@ end
 group :test do
   gem 'shoulda-matchers', github: 'thoughtbot/shoulda-matchers'
   gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'simplecov', require: false
 end
