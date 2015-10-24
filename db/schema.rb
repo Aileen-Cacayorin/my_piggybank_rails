@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151023214428) do
+ActiveRecord::Schema.define(version: 20151024044213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20151023214428) do
   end
 
   create_table "children", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
+    t.string   "username",               default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -38,10 +38,12 @@ ActiveRecord::Schema.define(version: 20151023214428) do
     t.datetime "updated_at",                          null: false
     t.integer  "bank_id"
     t.integer  "bank_account_id"
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
-  add_index "children", ["email"], name: "index_children_on_email", unique: true, using: :btree
   add_index "children", ["reset_password_token"], name: "index_children_on_reset_password_token", unique: true, using: :btree
+  add_index "children", ["username"], name: "index_children_on_username", unique: true, using: :btree
 
   create_table "parents", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

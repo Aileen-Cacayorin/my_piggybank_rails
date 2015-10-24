@@ -1,2 +1,6 @@
 <h2>This is <%= @parent.username %>'s bank </h2>
 <h2>Bank name: <%= @bank.name %> </h2>
+
+
+
+<%= link_to "Add a child to your bank", new_child_bank_registration_path(@bank)  %>
