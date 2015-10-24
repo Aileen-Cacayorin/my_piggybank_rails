@@ -1,5 +1,6 @@
 class Children::RegistrationsController < Devise::RegistrationsController
 before_filter :configure_sign_up_params, only: [:create]
+before_action :set_default
 # before_filter :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
@@ -9,15 +10,16 @@ before_filter :configure_sign_up_params, only: [:create]
 
   # POST /resource
   def create
-    @bank = Bank.find.(params[:bank_id])
-    @child = Children.new(configure_sign_up_params)
+    @child = Child.new(sign_up_params)
     @child.bank = @bank
+    @parent = @bank.parent
     if @child.save
       flash[:notice] = "Child added to bank"
-      redirect_to bank_path(@bank)
+      redirect_to parent_bank_path(@parent, @bank)
     else
       flash[:notice] = "Something went wrong"
       redirect_to :back
+    end
   end
 
   # GET /resource/edit
@@ -59,6 +61,10 @@ before_filter :configure_sign_up_params, only: [:create]
   # The path used after sign up.
   def after_sign_up_path_for(child)
     "banks/#{bank.id}"
+  end
+
+  def set_default
+    @bank = Bank.find(params[:bank_id])
   end
 
   # The path used after sign up for inactive accounts.

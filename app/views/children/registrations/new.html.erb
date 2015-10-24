@@ -1,6 +1,6 @@
 <h2>Sign up your child</h2>
 
-<%= form_for [@bank, @child] do |f| %>
+<%= form_for(resource, as: resource_name, url: child_bank_registration_path(@bank)) do |f| %>
   <%= devise_error_messages! %>
 
     <div class="field">
@@ -36,5 +36,3 @@
     <%= f.submit "Sign up" %>
   </div>
 <% end %>
-
-<%= render "children/shared/links" %>

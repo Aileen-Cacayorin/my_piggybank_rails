@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   end
 
   resources :banks do
-    devise_for :children, controllers: { sessions: "children/sessions" }
+    devise_for :children, controllers: { registrations: "children/registrations", sessions: "children/sessions" }
   end
 
   get 'static_pages/home'  'home' => 'static_pages#home'

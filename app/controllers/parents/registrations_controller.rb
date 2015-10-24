@@ -1,6 +1,8 @@
 class Parents::RegistrationsController < Devise::RegistrationsController
 # before_filter :configure_sign_up_params, only: [:create]
 # before_filter :configure_account_update_params, only: [:update]
+
+
   # GET /resource/sign_up
   def new
     @parent = Parent.new
@@ -13,7 +15,7 @@ class Parents::RegistrationsController < Devise::RegistrationsController
       sign_in(@parent)
       redirect_to new_parent_bank_path(@parent)
     else
-      redirect_to :after_sign_up_path
+      redirect_to :back
     end
   end
 
@@ -44,9 +46,9 @@ class Parents::RegistrationsController < Devise::RegistrationsController
   protected
 
   # If you have extra params to permit, append them to the sanitizer.
-  def configure_sign_up_params
-      devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :email, :password, :password_confirmation, :first_name, :last_name) }
-  end
+  # def configure_sign_up_params
+  #     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :email, :password, :password_confirmation, :first_name, :last_name) }
+  # end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_account_update_params
@@ -54,9 +56,9 @@ class Parents::RegistrationsController < Devise::RegistrationsController
   # end
 
   # The path used after sign up.
-  def after_sign_up_path
-     "/parents/#{@parent.id}/banks/new"
-  end
+  # def after_sign_up_path
+  #    "/parents/#{@parent.id}/banks/new"
+  # end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)

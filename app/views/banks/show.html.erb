@@ -4,3 +4,13 @@
 
 
 <%= link_to "Add a child to your bank", new_child_bank_registration_path(@bank)  %>
+
+
+<% if @bank.children.any? %>
+<ul>
+  <% @bank.children.each do |child| %>
+    <li><%= child.username %></li>
+  <% end %>
+</ul>
+
+<% end %>
