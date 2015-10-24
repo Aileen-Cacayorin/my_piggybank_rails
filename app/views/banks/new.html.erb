@@ -1,1 +1,7 @@
-Add new bank!!
+<h2>Create your bank</h2>
+
+<%= form_for [@parent, @bank] do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+ <%= f.submit "Add Bank" %>
+<%end %>
