@@ -10,4 +10,8 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :email, :password, :password_confirmation, :first_name, :last_name) }
     devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:login, :username, :email, :password) }
   end
+
+  def after_sign_in_path_for(parent)
+    "/parents/#{parent.id}/banks/#{parent.bank.id}"
+  end
 end
