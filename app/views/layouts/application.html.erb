@@ -7,9 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<% if parent_signed_in? %>
-  <%= current_parent.email %>
-<% end %>
+  <%= render 'layouts/header' %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
 <%= yield %>
 
 </body>

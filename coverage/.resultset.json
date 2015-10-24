@@ -472,6 +472,7 @@
         null,
         null,
         null,
+        null,
         null
       ],
       "/Users/aileencacayorin/Desktop/my_piggybank_rails/config/initializers/filter_parameter_logging.rb": [
@@ -625,19 +626,39 @@
         1,
         null,
         1,
+        null,
+        1,
         1,
         1,
         null,
         null,
         1,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
         null,
         null
       ],
       "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/application_controller.rb": [
         1,
+        1,
         null,
         null,
         1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
         null
       ],
       "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/helpers/application_helper.rb": [
@@ -646,6 +667,13 @@
       ],
       "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/helpers/static_pages_helper.rb": [
         1,
+        null
+      ],
+      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/parents_controller.rb": [
+        1,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/static_pages_controller.rb": [
@@ -731,6 +759,6 @@
         null
       ]
     },
-    "timestamp": 1445628546
+    "timestamp": 1445645031
   }
 }
