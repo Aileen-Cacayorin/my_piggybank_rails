@@ -1,6 +1,6 @@
 class Children::RegistrationsController < Devise::RegistrationsController
 before_filter :configure_sign_up_params, only: [:create]
-before_action :set_default
+# before_action :set_default
 # before_filter :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
@@ -10,10 +10,13 @@ before_action :set_default
 
   # POST /resource
   def create
+    @bank = Bank.find(params[:bank_id])
     @child = Child.new(sign_up_params)
     @child.bank = @bank
     @parent = @bank.parent
+    binding.pry
     if @child.save
+
       flash[:notice] = "Child added to bank"
       redirect_to parent_bank_path(@parent, @bank)
     else
@@ -50,7 +53,7 @@ before_action :set_default
 
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :password, :password_confirmation, :first_name, :last_name) }
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:username, :password, :password_confirmation, :first_name, :last_name, :bank_id) }
   end
 
   # If you have extra params to permit, append them to the sanitizer.
@@ -64,7 +67,7 @@ before_action :set_default
   end
 
   def set_default
-    @bank = Bank.find(params[:bank_id])
+    @bank = Bank.find(params[:bank])
   end
 
   # The path used after sign up for inactive accounts.
