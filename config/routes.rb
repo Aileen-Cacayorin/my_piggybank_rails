@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   devise_for :parents, controllers: { registrations: "parents/registrations" }
-  devise_for :children, only: [:sessions]
+  devise_for :children, controllers: { sessions: "children/sessions" } 
 
 
   resources :parents do
