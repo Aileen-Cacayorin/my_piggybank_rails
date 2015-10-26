@@ -13,7 +13,7 @@ before_filter :configure_sign_up_params, only: [:create]
     @bank = Bank.find(sign_up_params[:bank_id])
     @child = Child.new(sign_up_params)
     @parent = @bank.parent
-    binding.pry
+    if @child.save
       flash[:notice] = "Child added to bank"
       redirect_to parent_bank_path(@parent, @bank)
     else
