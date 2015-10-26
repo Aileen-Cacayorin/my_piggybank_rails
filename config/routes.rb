@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   end
 
   resources :banks do
-    :children
+    resources :children
   end
 
   get 'static_pages/home'  'home' => 'static_pages#home'
