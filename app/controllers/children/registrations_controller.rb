@@ -10,13 +10,10 @@ before_filter :configure_sign_up_params, only: [:create]
 
   # POST /resource
   def create
-    @bank = Bank.find(params[:bank_id])
+    @bank = Bank.find(sign_up_params[:bank_id])
     @child = Child.new(sign_up_params)
-    @child.bank = @bank
     @parent = @bank.parent
-    binding.pry
     if @child.save
-
       flash[:notice] = "Child added to bank"
       redirect_to parent_bank_path(@parent, @bank)
     else
@@ -66,9 +63,9 @@ before_filter :configure_sign_up_params, only: [:create]
     "banks/#{bank.id}"
   end
 
-  def set_default
-    @bank = Bank.find(params[:bank])
-  end
+  # def set_default
+  #   @bank = Bank.find(params[:bank])
+  # end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)

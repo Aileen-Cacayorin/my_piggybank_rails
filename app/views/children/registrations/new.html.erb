@@ -1,8 +1,7 @@
 <h2>Sign up your child</h2>
 
-<%= form_for(resource, as: resource_name, url: child_registration_path(@bank)) do |f| %>
+<%= form_for(resource, as: resource_name, url: child_registration_path) do |f| %>
   <%= devise_error_messages! %>
-
     <div class="field">
       <%= f.label :username %><br />
       <%= f.text_field :username, autofocus: true %>
@@ -32,7 +31,8 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <%= f.hidden_field :bank_id, value: @bank.id %>
+ <%=f.hidden_field :bank_id, :value => Bank.find(params[:bank]).id %>
+
 
   <div class="actions">
     <%= f.submit "Sign up" %>
