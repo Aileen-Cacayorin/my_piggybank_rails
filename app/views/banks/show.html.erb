@@ -3,7 +3,7 @@
 
 
 
-<%= link_to "Add a child to your bank", new_child_registration_path(:bank => @bank)   %>
+<%= link_to "Add a child to your bank", new_child_registration_path(:bank => @bank.id)   %>
 
 
 <% if @bank.children.any? %>
