@@ -18,7 +18,11 @@ class Parents::SessionsController < Devise::SessionsController
 
   protected
   def after_sign_in_path_for(parent)
-    "/parents/#{parent.id}/banks/#{parent.bank.id}"
+    if parent.bank
+      "/parents/#{parent.id}/banks/#{parent.bank.id}"
+    else
+      "/parents/#{parent.id}/banks/new"
+    end
   end
 
   # If you have extra params to permit, append them to the sanitizer.
