@@ -1,5 +1,6 @@
 class Child < ActiveRecord::Base
   belongs_to :bank
+  has_one :account
 
   def email_required?
   false
