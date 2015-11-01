@@ -540,6 +540,12 @@
         1,
         null,
         1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
         1,
         null,
         null,
@@ -552,10 +558,10 @@
         null,
         null,
         1,
-        null,
         1,
         null,
-        1,
+        null,
+        null,
         null,
         null,
         null,
@@ -702,6 +708,37 @@
       ],
       "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/helpers/static_pages_helper.rb": [
         1,
+        null
+      ],
+      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/accounts_controller.rb": [
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/banks_controller.rb": [
@@ -1223,6 +1260,7 @@
       "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/models/account.rb": [
         1,
         1,
+        1,
         null,
         1,
         null
@@ -1231,6 +1269,16 @@
         1,
         1,
         1,
+        null
+      ],
+      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/models/transaction.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
         null
       ],
       "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/factories/parent.rb": [
@@ -1286,6 +1334,7 @@
         null,
         2,
         2,
+        2,
         null
       ],
       "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/models/bank_spec.rb": [
@@ -1306,6 +1355,16 @@
         null
       ],
       "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/models/parent_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/models/transaction_spec.rb": [
         1,
         null,
         1,
@@ -1337,6 +1396,6 @@
         null
       ]
     },
-    "timestamp": 1446333922
+    "timestamp": 1446357168
   }
 }
