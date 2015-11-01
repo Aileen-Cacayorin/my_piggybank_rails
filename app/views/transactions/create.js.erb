@@ -1,0 +1,6 @@
+$('#new_transaction').hide()
+$('#new_transaction_link').show()
+$("#transactions").append(" <tr>" + "<td><%=@transaction.transaction_type%></td>" +
+                     "<td><%=@transaction.description%></td>" +
+                     "<td><%=@transaction.amount%></td>" + "</tr>");
+$("#balance").html("<%=@account.total%>");

@@ -19,6 +19,7 @@ class AccountsController < ApplicationController
   def show
     @child = Child.find(params[:child_id])
     @account = Account.find(params[:id])
+    @transactions = @account.transactions 
   end
 
   private

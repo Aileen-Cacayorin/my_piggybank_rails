@@ -12,10 +12,13 @@ class TransactionsController < ApplicationController
         amount = transaction_params[:amount].to_f
       end
     @transaction = Transaction.create(:description =>transaction_params[:description], :transaction_type => transaction_params[:transaction_type], :amount => amount )
-
     @transaction.account = @account
     @transaction.save
-    redirect_to child_account_path(@account.child, @account)
+    respond_to do |format|
+    format.html {redirect_to child_account_path(@account.child, @account)}
+    format.js
+    end
+
   end
 
 
