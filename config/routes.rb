@@ -9,6 +9,12 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
 
+  get 'static_pages/home'  'home' => 'static_pages#home'
+
+  get 'static_pages/help' 'help' => 'static_pages#help'
+
+  get 'static_pages/about' 'about' => 'static_pages#about'
+
   devise_for :parents, controllers: { registrations: "parents/registrations", sessions: "parents/sessions" }
   devise_for :children, controllers: { sessions: "children/sessions", registrations: "children/registrations" }
 
@@ -21,11 +27,11 @@ Rails.application.routes.draw do
     resources :children
   end
 
-  get 'static_pages/home'  'home' => 'static_pages#home'
+resources :children do
+  resources :accounts
 
-  get 'static_pages/help' 'help' => 'static_pages#help'
+  end
 
-  get 'static_pages/about' 'about' => 'static_pages#about'
 
 
 end

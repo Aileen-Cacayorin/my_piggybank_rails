@@ -9,7 +9,12 @@
 <% if @bank.children.any? %>
 <ul>
   <% @bank.children.each do |child| %>
-    <li><%= child.username %></li>
+    <li><%= child.username %> |
+    <% if !child.account %>
+      <%= link_to "Start Account", new_child_account_path(child), id: "new_account_#{child.id}", remote: true %> </li>
+    <% else %>
+      <%= link_to "View Account", child_account_path(child, child.account), id: "view_account_#{child.id}"  %>
+    <% end %>
   <% end %>
 </ul>
 

@@ -1,0 +1,10 @@
+<%= render "layouts/errors", :object => @account %>
+
+ <%= form_for [@child, @account], remote: true do |f| %>
+ <div class="form-group">
+     <%= f.label :beginning_balance %>
+     <%= f.number_field :beginning_balance, :step => 'any' %>
+   </div>
+
+   <%= f.submit "Submit", class: 'btn btn-primary' %>
+<% end %>
