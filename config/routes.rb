@@ -27,11 +27,14 @@ Rails.application.routes.draw do
     resources :children
   end
 
-resources :children do
-  resources :accounts
+  resources :children do
+    resources :accounts
 
   end
 
+  resources :accounts do
+    resources :transactions
+  end
 
 
 end

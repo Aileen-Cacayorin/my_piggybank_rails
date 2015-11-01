@@ -1,0 +1,24 @@
+<%= render 'layouts/errors', :object => @transaction %>
+
+<%= form_for [@account, @transaction] do |f| %>
+<div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+</div>
+
+<div class="form-group">
+    <%= f.label :transaction_type, "Transaction Type:" %>
+    <%= f.label "Deposit" %>
+    <%= f.radio_button :transaction_type, "Deposit", value: "Deposit"  %>
+    <%= f.label "Withdrawal" %>
+    <%= f.radio_button :transaction_type, "Withdrawal", value: "Withdrawal" %>
+</div>
+
+<div class="form-group">
+    <%= f.label :amount %>
+    <%= f.number_field :amount, :step => 'any' %>
+</div>
+
+<%= f.submit "Add transaction" %>
+
+<% end %>
