@@ -1,26 +1,12 @@
 <h3> <%= @child.first_name %>'s Account </h3>
 
 <p> Beginning Balance: <%= @account.beginning_balance %></p>
-<p>Current balance: <span id="balance"><%= @account.total %> </p></span>  
+<p>Current balance: <span id="balance"><%= @account.total %> </p></span>
 <br>
 
-<h4>Transaction History</h4>
+<% if current_parent %>
 <%= link_to "Make a transaction", new_account_transaction_path(@account), id: "new_transaction_link", remote: true %>
-<table class="table" id="transactions">
-  <tr>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Amount </th>
-  </tr>
-<% if @transactions.any? %>
-
-  <% @transactions.each do |transaction| %>
-    <tr id="transaction_<%=transaction.id%>">
-      <td><%= transaction.transaction_type %></td>
-      <td><%= transaction.description %></td>
-      <td>$ <%= transaction.amount %></td>
-
-    </tr>
-  <% end %>
-</table>
 <% end %>
+
+
+<%= render 'transactions' %>
