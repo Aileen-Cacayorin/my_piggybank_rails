@@ -1,4 +1,5 @@
 <h3> <%= @child.first_name %>'s Account </h3>
 
 <p> Beginning Balance: <%= @account.beginning_balance %></p>
+<p>Current balance: <%= @account.total %> </p> 
 <%= link_to "Make a transaction", new_account_transaction_path(@account), id: "new_transaction" %>
