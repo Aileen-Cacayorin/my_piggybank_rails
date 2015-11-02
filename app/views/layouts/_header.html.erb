@@ -15,8 +15,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-left">
         <% if parent_signed_in? %>
-
-          <li>  <%=link_to "Logged in as #{current_parent.username}", parent_bank_path(current_parent, current_parent.bank) %></li>
+           <% if current_parent.bank %>
+              <li>  <%=link_to "Logged in as #{current_parent.username}", parent_bank_path(current_parent, current_parent.bank) %></li>
+            <% else %>
+              <li><%= link_to "Logged in as #{current_parent.username}", new_parent_bank_path(current_parent) %></li>
+            <% end %>
           <li><%= link_to "Log Out", destroy_parent_session_path, :method => :delete%></li>
 
         <% else %>
