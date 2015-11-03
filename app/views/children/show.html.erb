@@ -1,7 +1,10 @@
 <h3>This is the child page</h3>
 
+<% if @account %>
 <p> Current Balance: $ <%= @account.total %> </p>
 
 <%= link_to "View Transactions", child_account_path(@child, @account), id: "show_child_transactions", remote: true %>
 
 <%= link_to "Hide Transactions", child_path(@child), id: "hide_child_transactions", remote: true %>
+
+<% end %>
