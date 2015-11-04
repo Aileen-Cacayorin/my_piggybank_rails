@@ -1,6 +1,8 @@
 $('#new_transaction').hide()
 $('#new_transaction_link').show()
-$("#transactions").append(" <tr>" + "<td><%=@transaction.transaction_type%></td>" +
+$("#transactions").append(" <tr>" + "<td><%= @transaction.created_at.strftime("%m-%d-%Y") %></td>" +
+                     "<td><%= @transaction.account.child.username %></td>" +
+                     "<td><%=@transaction.transaction_type%></td>" +
                      "<td><%=@transaction.description%></td>" +
                      "<td><%=@transaction.amount%></td>" + "</tr>");
 $("#balance").html("<%=@account.total%>");

@@ -9,7 +9,10 @@ class RequestsController < ApplicationController
     @request = Request.create(request_params)
     @child = Child.find(request_params[:child_id])
     @bank = @child.bank
-    redirect_to bank_child_path(@bank, @child)
+    respond_to do |format|
+    format.html {redirect_to bank_child_path(@bank, @child)}
+    format.js
+    end
   end
 
   def destroy

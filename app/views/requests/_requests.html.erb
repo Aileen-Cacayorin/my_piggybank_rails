@@ -3,6 +3,8 @@
   <table class="table" id="requests">
 
     <tr>
+      <th>Date requested</th>
+      <th>Username</th>
       <th>Type</th>
       <th>Description</th>
       <th>Amount </th>
@@ -11,6 +13,8 @@
 
     <% @requests.each do |request| %>
       <tr id="request_<%=request.id%>">
+        <td><%= request.created_at.strftime("%m-%d-%Y") %></td>
+        <td><%= request.child.username %></td>
         <td><%= request.request_type %></td>
         <td><%= request.description %></td>
         <td>$ <%= request.amount %></td>

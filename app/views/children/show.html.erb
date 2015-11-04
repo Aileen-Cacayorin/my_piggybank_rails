@@ -8,7 +8,7 @@
 
 <%= link_to "Hide Transactions", child_path(@child), id: "hide_child_transactions", remote: true %>
 
-<p><%= link_to "Request a Transaction", new_request_path(:child => @child.id, :parent => @child.parent.id) %></p>
+<p><%= link_to "Request a Transaction", new_request_path(:child => @child.id, :parent => @child.parent.id), remote: true, id: "transaction_request_link" %></p>
 
 
 <%= render "requests/requests" %>
