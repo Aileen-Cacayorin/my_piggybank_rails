@@ -1,10 +1,19 @@
-<h3>This is the child page</h3>
+<h2>Welcome <%= @child.username %> </h2>
 
 <% if @account %>
+<p> Starting Balance: $ <%= @account.beginning_balance %> </p>
 <p> Current Balance: $ <%= @account.total %> </p>
 
 <%= link_to "View Transactions", child_account_path(@child, @account), id: "show_child_transactions", remote: true %>
 
 <%= link_to "Hide Transactions", child_path(@child), id: "hide_child_transactions", remote: true %>
+
+<p><%= link_to "Request a Transaction", new_request_path(:child => @child.id, :parent => @child.parent.id) %></p>
+
+
+<%= render "requests/requests" %>
+
+<% else %>
+<h3>No account yet. Ask your parent to start an account for you.</h3>
 
 <% end %>

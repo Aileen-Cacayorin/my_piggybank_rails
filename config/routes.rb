@@ -36,7 +36,7 @@ Rails.application.routes.draw do
     resources :transactions
   end
 
-
+  resources :requests
 end
 
 

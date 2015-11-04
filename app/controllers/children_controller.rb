@@ -4,6 +4,7 @@ class ChildrenController < ApplicationController
     @account = @child.account
     if @account
       @transactions = @account.transactions
+      @requests = @child.requests
     end
   end
 end
