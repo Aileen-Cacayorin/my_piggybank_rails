@@ -12,7 +12,11 @@ class RequestsController < ApplicationController
     redirect_to bank_child_path(@bank, @child)
   end
 
-
+  def destroy
+      @request = Request.find(params[:id])
+      @request.destroy
+      redirect_to :back
+  end
 
 private
   def request_params

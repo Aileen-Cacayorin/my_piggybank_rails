@@ -14,9 +14,15 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.create(:description =>transaction_params[:description], :transaction_type => transaction_params[:transaction_type], :amount => amount )
     @transaction.account = @account
     @transaction.save
-    respond_to do |format|
-    format.html {redirect_to child_account_path(@account.child, @account)}
-    format.js
+    if transaction_params[:request_id]
+      @request = Request.find(transaction_params[:request_id])
+      @request.destroy
+      redirect_to :back
+    else
+      respond_to do |format|
+      format.html {redirect_to child_account_path(@account.child, @account)}
+      format.js
+      end
     end
 
   end
@@ -27,6 +33,6 @@ class TransactionsController < ApplicationController
 
 private
   def transaction_params
-    params.require(:transaction).permit(:amount, :transaction_type, :description)
+    params.require(:transaction).permit(:amount, :transaction_type, :description, :request_id)
   end
 end
