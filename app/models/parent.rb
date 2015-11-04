@@ -2,6 +2,8 @@ class Parent < ActiveRecord::Base
   attr_accessor :login
 
   has_one :bank
+  has_many :requests
+
 
   validates :first_name, :presence => true
   validates :last_name, :presence => true

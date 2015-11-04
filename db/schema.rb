@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151101053100) do
+ActiveRecord::Schema.define(version: 20151104002851) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,16 @@ ActiveRecord::Schema.define(version: 20151101053100) do
 
   add_index "parents", ["email"], name: "index_parents_on_email", unique: true, using: :btree
   add_index "parents", ["reset_password_token"], name: "index_parents_on_reset_password_token", unique: true, using: :btree
+
+  create_table "requests", force: :cascade do |t|
+    t.string   "request_type"
+    t.string   "description"
+    t.decimal  "amount",       precision: 10, scale: 2
+    t.integer  "child_id"
+    t.integer  "parent_id"
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+  end
 
   create_table "transactions", force: :cascade do |t|
     t.decimal  "amount",           precision: 10, scale: 2
