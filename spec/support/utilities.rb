@@ -30,3 +30,12 @@ def add_child
   click_button "Sign up"
 
 end
+
+def add_account
+  add_child
+  click_link "Start Account"
+  fill_in "Beginning balance", with: "120.00"
+  click_button "Submit"
+  page.should have_no_content "Start Account"
+
+end
