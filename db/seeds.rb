@@ -5,3 +5,51 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+test_parent = Parent.create(
+  username: "username",
+  email: "username@gmail.com",
+  password: "password",
+  password_confirmation: "password",
+  first_name: "user",
+  last_name: "name"
+)
+
+test_bank = Bank.create(
+  name: "Test Bank",
+  parent_id: "#{test_parent.id}"
+
+)
+
+test_child = Child.create(
+  username: "testchild",
+  password: "fakefake",
+  password_confirmation: "fakefake",
+  first_name: "test",
+  last_name: "child",
+  bank_id: "#{test_bank.id}"
+)
+
+test_account = Account.create(
+  beginning_balance: 125.25,
+  child_id: "#{test_child.id}"
+)
+
+10.times do |n|
+  Transaction.create(
+    description: %w[j k i e r e z n a x y q u o p z y e].sample(10).join(""),
+    transaction_type: "Deposit",
+    amount: 5.25,
+    account_id: "#{test_account.id}"
+  )
+end
+
+6.times do |n|
+  Transaction.create(
+    description: %w[j k i e r e z n a x y q u o p z y e].sample(10).join(""),
+    transaction_type: "Withdrawal",
+    amount: 5.25,
+    account_id: "#{test_account.id}"
+  )
+end
