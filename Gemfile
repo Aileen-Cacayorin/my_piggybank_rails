@@ -44,4 +44,6 @@ group :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'simplecov', require: false
+  gem 'poltergeist'
+  gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
 end
