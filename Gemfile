@@ -16,6 +16,8 @@ gem 'carrierwave', '0.10.0'
 gem 'devise'
 gem 'mini_magick',             '3.8.0'
 gem "hirb"
+gem "chartkick"
+gem 'groupdate'
 
 
 group :production do
