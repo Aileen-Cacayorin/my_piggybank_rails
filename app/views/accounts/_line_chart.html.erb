@@ -12,27 +12,32 @@
      google.setOnLoadCallback(drawChart);
 
      function drawChart() {
-       var data = google.visualization.arrayToDataTable([
+       var data = new google.visualization.DataTable();
 
-         ['Date', 'Transactions'],
-         <% @transactions.each do |transaction| %>
-          ['<%=transaction.created_at.strftime("%m-%d-%Y") %>', <%=transaction.amount %>],
-         <% end %>
 
-       ]);
+         data.addColumn('date', 'Transaction Date');
+         data.addColumn('number', 'Balance');
 
+         data.addRows([
+           <% @chart_data.each do |day| %>
+           [ new Date ('<%= day[:date] %>'), <%= day[:total] %> ],
+           <% end %>
+
+        ]);
+
+
+       var formatter = new google.visualization.DateFormat({formatType: 'short'});
        var options = {
          title: 'Transaction History',
-         curveType: 'function',
          legend: { position: 'bottom' }
        };
 
-       var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+       var chart = new google.visualization.LineChart(document.getElementById('transaction_chart'));
 
        chart.draw(data, options);
      }
    </script>
  </head>
  <body>
-   <div id="curve_chart" style="width: 900px; height: 500px"></div>
+   <div id="transaction_chart" style="width: 900px; height: 500px"></div>
  </body>

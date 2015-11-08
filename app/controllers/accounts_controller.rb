@@ -20,10 +20,8 @@ class AccountsController < ApplicationController
     @child = Child.find(params[:child_id])
     @account = Account.find(params[:id])
     @transactions = @account.transactions.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
-    # @hash = {}
-    # @transactions.each do |transaction|
-    #   @hash[transaction.created_at.strftime("%m-%d-%Y")] = transaction.account.total
-    # end
+    @chart_data = @account.transactions.transaction_chart_data
+    binding.pry
   end
 
   private
