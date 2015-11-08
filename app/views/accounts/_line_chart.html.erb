@@ -1,4 +1,4 @@
-<head>
+
    <script type="text/javascript"
          src="https://www.google.com/jsapi?autoload={
            'modules':[{
@@ -20,7 +20,7 @@
 
          data.addRows([
            <% @chart_data.each do |day| %>
-           [ new Date ('<%= day[:date] %>'), <%= day[:total] %> ],
+           [ new Date ('<%= day[:date] %>'),( <%= day[:total] %> + <%=@account.total %>) ],
            <% end %>
 
         ]);
@@ -37,7 +37,6 @@
        chart.draw(data, options);
      }
    </script>
- </head>
- <body>
+
+
    <div id="transaction_chart" style="width: 900px; height: 500px"></div>
- </body>

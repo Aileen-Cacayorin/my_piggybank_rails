@@ -19,6 +19,7 @@ gem "hirb"
 gem "chartkick"
 gem 'groupdate'
 
+gem 'jquery-turbolinks'
 
 group :production do
   gem 'puma'
