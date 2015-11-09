@@ -20,7 +20,7 @@
 
          data.addRows([
            <% @chart_data.each do |day| %>
-           [ new Date ('<%= day[:date] %>'),( <%= day[:total] %> + <%=@account.total %>) ],
+           [ new Date ('<%= day[:date] %>'),( <%= day[:total] %>)],
            <% end %>
 
         ]);
