@@ -13,31 +13,36 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-left">
-        <% if parent_signed_in? %>
+
+      <% if parent_signed_in? || child_signed_in? %>
+
+          <% if parent_signed_in? %>
+            <ul class="nav navbar-nav navbar-left">
            <% if current_parent.bank %>
               <li>  <%=link_to "Logged in as #{current_parent.username}", parent_bank_path(current_parent, current_parent.bank) %></li>
+              <li><%= link_to "Log Out", destroy_parent_session_path, :method => :delete%></li>
             <% else %>
               <li><%= link_to "Logged in as #{current_parent.username}", new_parent_bank_path(current_parent) %></li>
+              </ul>
             <% end %>
-          <li><%= link_to "Log Out", destroy_parent_session_path, :method => :delete%></li>
 
+
+          <% else child_signed_in? %>
+            <ul class="nav navbar-nav navbar-right">
+              <li>Logged in as  <%=current_child.username %></li>
+              <li><%= link_to "Log Out", destroy_child_session_path, :method => :delete%></li>
+            </ul>
+          <% end %>
         <% else %>
-          <li><%= link_to "Parent Sign up", new_parent_registration_path %></li>
-          <li><%= link_to "Parent Sign In", new_parent_session_path %></li>
+          <ul class="nav navbar-nav navbar-left">
+            <li><%= link_to "Parent Sign up", new_parent_registration_path %></li>
+            <li><%= link_to "Parent Sign In", new_parent_session_path %></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Child Sign In", new_child_session_path %></li>
+          </ul>
+
         <% end %>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <% if child_signed_in? %>
-
-          <li>Logged in as  <%=current_child.username %></li>
-          <li><%= link_to "Log Out", destroy_child_session_path, :method => :delete%></li>
-
-        <% else %>
-
-          <li><%= link_to "Child Sign In", new_child_session_path %></li>
-        <% end %>
-      </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
