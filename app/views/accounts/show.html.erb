@@ -1,4 +1,4 @@
-<h3> <%= @child.first_name %>'s Account </h3>
+<h2> <%= @child.first_name %>'s Account </h2>
 
 <p> Beginning Balance: <%= @account.beginning_balance %></p>
 <p>Current balance: <span id="balance"><%= @account.total %> </p></span>
@@ -11,4 +11,7 @@
 
 <%= render 'transactions' %>
 
-<%= render 'line_chart' %>
+<div class="transaction_chart">
+
+  <%= render 'line_chart' %>
+</div>

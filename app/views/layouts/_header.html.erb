@@ -19,7 +19,7 @@
           <% if parent_signed_in? %>
             <ul class="nav navbar-nav navbar-left">
            <% if current_parent.bank %>
-              <li>  <%=link_to "Logged in as #{current_parent.username}", parent_bank_path(current_parent, current_parent.bank) %></li>
+              <li>  <%=link_to "My Bank (#{current_parent.username})", parent_bank_path(current_parent, current_parent.bank) %></li>
               <li><%= link_to "Log Out", destroy_parent_session_path, :method => :delete%></li>
             <% else %>
               <li><%= link_to "Logged in as #{current_parent.username}", new_parent_bank_path(current_parent) %></li>
@@ -29,7 +29,7 @@
 
           <% else child_signed_in? %>
             <ul class="nav navbar-nav navbar-right">
-              <li>Logged in as  <%=current_child.username %></li>
+              <li> <%=link_to "Logged in as #{current_child.username}", bank_child_path(current_child.bank, current_child) %></li>
               <li><%= link_to "Log Out", destroy_child_session_path, :method => :delete%></li>
             </ul>
           <% end %>

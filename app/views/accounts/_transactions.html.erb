@@ -10,6 +10,7 @@
       <th>Amount </th>
     </tr>
   <% if @transactions.any? %>
+
   <%= will_paginate @transactions %>
     <% @transactions.each do |transaction| %>
       <tr id="transaction_<%=transaction.id%>">
