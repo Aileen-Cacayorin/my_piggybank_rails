@@ -1,2 +1,2 @@
 $('#new_account').hide()
-$('view_account_<%=@child.id%>').show()
+$('#show_view_account_<%=@child.id%>').html('<a href="/children/<%=@child.id%>/accounts/<%=@account.id%>">View Account</a>');
