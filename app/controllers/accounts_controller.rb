@@ -20,6 +20,8 @@ class AccountsController < ApplicationController
     @child = Child.find(params[:child_id])
     @account = Account.find(params[:id])
     @transactions = @account.transactions.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
+    @chart_data = @account.transactions.transaction_chart_data(@account)
+
   end
 
   private
@@ -27,4 +29,6 @@ class AccountsController < ApplicationController
   def account_params
     params.require(:account).permit(:beginning_balance)
   end
+
+
 end
