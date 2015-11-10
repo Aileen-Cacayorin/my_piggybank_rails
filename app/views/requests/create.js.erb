@@ -1,4 +1,4 @@
-$('#new_request').hide()
+$('#modal_form').modal("hide");
 $('#transaction_request_link').show()
 $("#requests").append(" <tr> <td><%= @request.created_at.strftime("%m-%d-%Y") %></td>" +
                      "<td><%= @request.child.username %></td>" +
