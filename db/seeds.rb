@@ -1,4 +1,3 @@
-
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -33,24 +32,29 @@ test_child = Child.create(
 )
 
 test_account = Account.create(
-  beginning_balance: 125.25,
+  beginning_balance: 0,
   child_id: "#{test_child.id}"
 )
 
 10.times do |n|
-  Transaction.create(
+  n = Transaction.create(
     description: %w[j k i e r e z n a x y q u o p z y e].sample(10).join(""),
     transaction_type: "Deposit",
     amount: 5.25,
     account_id: "#{test_account.id}"
   )
+  n.created_at = (rand*30).days.ago.to_time
+  n.save
+
 end
 
 6.times do |n|
-  Transaction.create(
+  n = Transaction.create(
     description: %w[j k i e r e z n a x y q u o p z y e].sample(10).join(""),
     transaction_type: "Withdrawal",
     amount: 5.25,
     account_id: "#{test_account.id}"
   )
+  n.created_at = (rand*30).days.ago.to_time
+  n.save
 end
