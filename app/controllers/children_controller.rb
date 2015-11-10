@@ -1,6 +1,6 @@
 class ChildrenController < ApplicationController
-  before_filter :authenticate_child!
-  before_filter :child_is_current_child
+  before_action :authenticate_child!
+  before_action :child_is_current_child
   def show
     @child = current_child
     @account = @child.account

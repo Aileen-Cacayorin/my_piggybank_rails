@@ -1,5 +1,5 @@
 class RequestsController < ApplicationController
-  before_filter :authenticate_child!
+  before_action :authenticate_child!
   def new
     @request = Request.new
     @child = Child.find(params[:child])

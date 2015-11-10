@@ -1,8 +1,9 @@
 class AccountsController < ApplicationController
   before_action :set_default
-  before_filter :authenticate_parent!
-  before_filter :parent_is_current_parent
+  before_action :authenticate_parent!
+  before_action :parent_is_current_parent
   def new
+
     @account = Account.new
   end
 
@@ -21,7 +22,6 @@ class AccountsController < ApplicationController
     @account = Account.find(params[:id])
     @transactions = @account.transactions.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
     @chart_data = @account.transactions.transaction_chart_data(@account)
-
   end
 
   private
@@ -35,8 +35,7 @@ class AccountsController < ApplicationController
   end
 
   def parent_is_current_parent
-    @account = Account.find(params[:id])
-    unless current_parent.id == @child.parent
+    unless current_parent.id == @child.parent.id
       flash[:danger] = "You may only view accounts in your bank."
       redirect_to root_path
     end
