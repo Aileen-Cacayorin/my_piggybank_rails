@@ -53,7 +53,7 @@ end
   n = Transaction.create(
     description: %w[j k i e r e z n a x y q u o p z y e].sample(10).join(""),
     transaction_type: "Withdrawal",
-    amount: 5.25,
+    amount: -5.25,
     account_id: "#{test_account.id}"
   )
   n.created_at = (rand*30).days.ago.to_time

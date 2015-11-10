@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/support/utilities.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/support/utilities.rb": [
         null,
         null,
         1,
@@ -44,7 +44,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/controllers/static_pages_controller_spec.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/controllers/static_pages_controller_spec.rb": [
         1,
         null,
         1,
@@ -72,7 +72,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/rails_helper.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -120,8 +120,8 @@
         null,
         null,
         1,
-        29,
-        29,
+        30,
+        30,
         null,
         null,
         null,
@@ -148,14 +148,14 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/config/environment.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/config/application.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/config/application.rb": [
         1,
         null,
         1,
@@ -192,12 +192,12 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/config/boot.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/config/environments/test.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/config/environments/test.rb": [
         1,
         null,
         null,
@@ -241,7 +241,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/config/initializers/assets.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -254,7 +254,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/config/initializers/backtrace_silencers.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -263,12 +263,12 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/config/initializers/cookies_serializer.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/config/initializers/devise.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -532,13 +532,13 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/config/initializers/filter_parameter_logging.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/config/initializers/inflections.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -556,18 +556,18 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/config/initializers/mime_types.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/config/initializers/session_store.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/config/initializers/wrap_parameters.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -583,7 +583,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/config/routes.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/config/routes.rb": [
         1,
         1,
         null,
@@ -681,7 +681,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/models/parent.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/models/parent.rb": [
         1,
         1,
         null,
@@ -708,7 +708,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/models/child.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/models/child.rb": [
         1,
         1,
         1,
@@ -742,7 +742,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/application_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/application_controller.rb": [
         1,
         1,
         null,
@@ -766,53 +766,95 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/helpers/application_helper.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/helpers/static_pages_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/accounts_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/helpers/devise_helper.rb": [
         1,
         1,
-        2,
-        2,
+        7,
         null,
-        null,
-        1,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
-        2,
+        0,
+        0,
         null,
         null,
         null,
-        1,
-        1,
-        1,
-        1,
         null,
         null,
-        1,
         null,
-        1,
-        2,
+        0,
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/banks_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/helpers/static_pages_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/my_piggybank_rails/app/helpers/transactions_helper.rb": [
+        1,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/accounts_controller.rb": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        1,
+        4,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/banks_controller.rb": [
+        1,
         1,
         1,
         1,
         null,
         1,
-        null,
         4,
         null,
         null,
@@ -829,24 +871,31 @@
         null,
         null,
         1,
-        8,
-        8,
+        7,
+        7,
         null,
         null,
         null,
         1,
         null,
         1,
-        16,
+        15,
         null,
         null,
         1,
         4,
         null,
         null,
+        1,
+        7,
+        0,
+        0,
+        null,
+        null,
+        null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/children/confirmations_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/children/confirmations_controller.rb": [
         1,
         null,
         null,
@@ -876,7 +925,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/children/omniauth_callbacks_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/children/omniauth_callbacks_controller.rb": [
         1,
         null,
         null,
@@ -906,7 +955,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/children/passwords_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/children/passwords_controller.rb": [
         1,
         null,
         null,
@@ -940,7 +989,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/children/registrations_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/children/registrations_controller.rb": [
         1,
         1,
         null,
@@ -1016,7 +1065,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/children/sessions_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/children/sessions_controller.rb": [
         1,
         1,
         null,
@@ -1047,7 +1096,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/children/unlocks_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/children/unlocks_controller.rb": [
         1,
         null,
         null,
@@ -1077,9 +1126,11 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/children_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/children_controller.rb": [
         1,
         1,
+        1,
+        0,
         0,
         0,
         0,
@@ -1089,37 +1140,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/parents/confirmations_controller.rb": [
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/parents/omniauth_callbacks_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/parents/confirmations_controller.rb": [
         1,
         null,
         null,
@@ -1149,7 +1170,37 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/parents/passwords_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/parents/omniauth_callbacks_controller.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/parents/passwords_controller.rb": [
         1,
         null,
         null,
@@ -1183,7 +1234,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/parents/registrations_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/parents/registrations_controller.rb": [
         1,
         null,
         null,
@@ -1252,7 +1303,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/parents/sessions_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/parents/sessions_controller.rb": [
         1,
         null,
         null,
@@ -1286,7 +1337,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/parents/unlocks_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/parents/unlocks_controller.rb": [
         1,
         null,
         null,
@@ -1316,7 +1367,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/requests_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/requests_controller.rb": [
         1,
         1,
         0,
@@ -1346,7 +1397,7 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/static_pages_controller.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/static_pages_controller.rb": [
         1,
         1,
         null,
@@ -1358,31 +1409,31 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/controllers/transactions_controller.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
+      "/Users/Guest/Desktop/my_piggybank_rails/app/controllers/transactions_controller.rb": [
         1,
         1,
         0,
+        0,
         null,
-        1,
         null,
-        1,
-        1,
-        1,
         1,
         0,
         0,
         0,
         null,
-        1,
-        1,
-        1,
+        0,
+        null,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        0,
         null,
         null,
         null,
@@ -1394,92 +1445,63 @@
         null,
         1,
         1,
-        5,
-        null,
-        null
-      ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/models/account.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        2,
+        0,
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/models/bank.rb": [
-        1,
-        1,
-        1,
-        null
-      ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/models/request.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/models/account.rb": [
         1,
         1,
         1,
         null,
         1,
+        null,
         1,
-        1,
+        0,
+        null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/models/transaction.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/models/bank.rb": [
+        1,
         1,
         1,
         null,
-        1,
-        1,
         1,
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/factories/parent.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/app/models/request.rb": [
         1,
         1,
         1,
+        null,
         1,
         1,
         1,
+        null
+      ],
+      "/Users/Guest/Desktop/my_piggybank_rails/app/models/transaction.rb": [
         1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        0,
+        null,
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/features/add_account_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/features/add_bank_spec.rb": [
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/features/add_child_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/factories/parent.rb": [
         1,
         1,
         1,
@@ -1490,10 +1512,35 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/features/add_transaction_spec.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/features/add_account_spec.rb": [
         1,
         null,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/features/add_bank_spec.rb": [
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/features/add_child_spec.rb": [
+        1,
+        null,
         1,
         1,
         1,
@@ -1508,7 +1555,25 @@
         null,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/helpers/static_pages_helper_spec.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/features/add_transaction_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/helpers/static_pages_helper_spec.rb": [
         1,
         null,
         null,
@@ -1525,7 +1590,7 @@
         1,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/models/account_spec.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/models/account_spec.rb": [
         1,
         null,
         1,
@@ -1535,16 +1600,7 @@
         2,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/models/bank_spec.rb": [
-        1,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null
-      ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/models/child_spec.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/models/bank_spec.rb": [
         1,
         null,
         1,
@@ -1553,18 +1609,16 @@
         2,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/models/parent_spec.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/models/child_spec.rb": [
         1,
         null,
         1,
         2,
         2,
         2,
-        2,
-        2,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/models/request_spec.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/models/parent_spec.rb": [
         1,
         null,
         1,
@@ -1575,7 +1629,18 @@
         2,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/models/transaction_spec.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/models/request_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/models/transaction_spec.rb": [
         1,
         null,
         1,
@@ -1585,21 +1650,21 @@
         2,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/views/static_pages/about.html.erb_spec.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/views/static_pages/about.html.erb_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/views/static_pages/help.html.erb_spec.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/views/static_pages/help.html.erb_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/views/static_pages/home.html.erb_spec.rb": [
+      "/Users/Guest/Desktop/my_piggybank_rails/spec/views/static_pages/home.html.erb_spec.rb": [
         1,
         null,
         1,
@@ -1607,6 +1672,6 @@
         null
       ]
     },
-    "timestamp": 1446703888
+    "timestamp": 1447184305
   }
 }

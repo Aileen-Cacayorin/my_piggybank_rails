@@ -1,11 +1,9 @@
 class BanksController < ApplicationController
   before_action :set_default
   before_action :authenticate_parent!
-  before_filter :parent_is_current_parent
-
+  before_filter :parent_is_current_parent, except: [:new, :create]
 
   def new
-
     @bank = Bank.new
   end
 

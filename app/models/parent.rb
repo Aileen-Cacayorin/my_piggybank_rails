@@ -19,7 +19,7 @@ class Parent < ActiveRecord::Base
      if login = conditions.delete(:login)
        where(conditions).where(["username = :value OR lower(email) = lower(:value)", { :value => login }]).first
      else
-       where(conditions).first
+       where(conditions.to_hash).first
      end
    end
 end
