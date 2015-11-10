@@ -33,7 +33,7 @@ test_child = Child.create(
 )
 
 test_account = Account.create(
-  beginning_balance: 125.25,
+  beginning_balance: 100.00,
   child_id: "#{test_child.id}"
 )
 
