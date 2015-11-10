@@ -14,7 +14,6 @@ class Transaction < ActiveRecord::Base
       { date:  date,
         total:  self.where(:created_at => start_date.beginning_of_day..date.end_of_day).sum(:amount).to_f + account.beginning_balance
       }
-
     end
   end
 end
