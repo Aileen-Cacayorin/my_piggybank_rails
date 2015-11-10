@@ -11,10 +11,10 @@ class BanksController < ApplicationController
     @bank = Bank.new(bank_params)
     @bank.parent = @parent
     if @bank.save
-      flash[:notice] = "Your bank was created!"
+      flash[:success] = "Your bank was created!"
       redirect_to parent_bank_path(@parent, @bank)
     else
-      flash[:notice] = "Something went wrong."
+      flash[:danger] = "Something went wrong."
       redirect_to :back
     end
   end
