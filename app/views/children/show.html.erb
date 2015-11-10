@@ -3,12 +3,9 @@
   <div class="col-md-6">
     <h2>Welcome <%= @child.username %>! </h2>
     <% if @account %>
-      <p> Starting Balance: $ <%= @account.beginning_balance %> </p>
-      <p> Current Balance: $ <%= @account.total %> </p>
-
-      <p><%= link_to "Request a Transaction", new_request_path(:child => @child.id, :parent => @child.parent.id), remote: true, id: "transaction_request_link" %></p>
-      <div id="child_transaction_table">
         <%= render 'accounts/transactions' %>
+        <p><%= link_to "Request a Transaction", new_request_path(:child => @child.id, :parent => @child.parent.id), remote: true, id: "transaction_request_link" %></p>
+        <div id="child_transaction_table">
       </div>
 
 
@@ -20,13 +17,18 @@
   <div class="col-md-6">
     <h2>You have saved</h2>
     <h1>$ <%= @account.total %> </h1>
+    <p> Starting Balance: $ <%= @account.beginning_balance %> </p>
     <div class="transaction_chart">
 
       <%= render 'accounts/line_chart' %>
     </div>
-    
+
   </div>
 </div>
+
+
+
+<%= render 'requests/modal' %>
 
 
 
