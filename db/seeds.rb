@@ -38,12 +38,14 @@ test_account = Account.create(
 )
 
 10.times do |n|
-  Transaction.create(
+  n = Transaction.create(
     description: %w[j k i e r e z n a x y q u o p z y e].sample(10).join(""),
     transaction_type: "Deposit",
     amount: 5.25,
     account_id: "#{test_account.id}"
   )
+  n.created_at = (rand * 30).day.ago.to_time
+  n.save
 end
 
 6.times do |n|

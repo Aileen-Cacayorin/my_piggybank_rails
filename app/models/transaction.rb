@@ -12,7 +12,7 @@ class Transaction < ActiveRecord::Base
 
     (30.day.ago.to_date..Date.today).map do |date|
       { date:  date,
-        total:  self.where(:created_at => start_date.beginning_of_day..date.end_of_day).sum(:amount).to_f + account.beginning_balance
+        total:  self.where(:created_at => 30.day.ago..date.end_of_day).sum(:amount).to_f + account.beginning_balance
       }
     end
   end
