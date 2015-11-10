@@ -1,6 +1,8 @@
 class BanksController < ApplicationController
-  before_action :authenticate_parent!
   before_action :set_default
+  before_action :authenticate_parent!
+  before_filter :parent_is_current_parent
+
 
   def new
 
@@ -33,6 +35,13 @@ class BanksController < ApplicationController
 
   def bank_params
     params.require(:bank).permit(:name)
+  end
+
+  def parent_is_current_parent
+    unless current_parent.bank.id == params[:id].to_i
+      flash[:danger] = "You may only view your own bank."
+      redirect_to root_path
+    end
   end
 
 end
