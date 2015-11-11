@@ -4,7 +4,7 @@ describe "the add transaction path", js: true do
   it 'creates a transaction' do
     add_account
     visit "/"
-    click_link "Logged in as testperson"
+    click_link "My Bank (testperson)"
     click_link "View Account"
     click_link "Make a transaction"
     fill_in "Description", with: "Chores"
