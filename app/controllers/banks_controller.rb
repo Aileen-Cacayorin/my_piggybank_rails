@@ -21,7 +21,9 @@ class BanksController < ApplicationController
 
   def show
     @bank = Bank.find(params[:id]) || Bank.find(params[:current_parent_id])
+    @children = @bank.children
     @requests = @bank.parent.requests
+
   end
 
 
