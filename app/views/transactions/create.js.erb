@@ -6,4 +6,4 @@ $("#transactions tr:first").after(" <tr>" + "<td><%= @transaction.created_at.str
                      "<td><%=@transaction.description%></td>" +
                      "<td><%=number_to_currency @transaction.amount%></td>" + "</tr>");
 $("#balance").html("<%=@account.total%>");
-drawChart()
+drawChart();
