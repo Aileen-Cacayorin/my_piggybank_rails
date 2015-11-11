@@ -1,6 +1,6 @@
 class TransactionsController < ApplicationController
     before_action :authenticate_parent!
-
+    before_action :set_default
 
   def new
     @transaction = Transaction.new

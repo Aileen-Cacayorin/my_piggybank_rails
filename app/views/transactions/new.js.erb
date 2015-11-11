@@ -1,1 +1,7 @@
-$('#new_transaction_link').hide().after('<%= j render('form')%>')
+$('.modal-title').html("Create a Transaction");
+
+
+$('.modal-body').html('<%= j render("form") %>');
+
+
+$('#modal_form').modal("show");

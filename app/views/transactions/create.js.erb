@@ -1,4 +1,4 @@
-$('#new_transaction').hide()
+$('#modal_form').modal("hide");
 $('#new_transaction_link').show()
 $("#transactions").append(" <tr>" + "<td><%= @transaction.created_at.strftime("%m-%d-%Y") %></td>" +
                      "<td><%= @transaction.account.child.username %></td>" +
