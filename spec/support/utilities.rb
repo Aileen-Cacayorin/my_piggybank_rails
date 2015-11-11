@@ -39,3 +39,25 @@ def add_account
   page.should have_no_content "Start Account"
 
 end
+
+def add_transaction
+  add_account
+  visit "/"
+  click_link "My Bank (testperson)"
+  click_link "View Account"
+  click_link "Make a transaction"
+  fill_in "Description", with: "Chores"
+  choose('transaction_transaction_type_deposit')
+  fill_in "Amount", with: 12.25
+  click_button "Add transaction"
+end
+
+
+def child_login
+  add_account
+  click_link "Log Out"
+  click_link "Child Sign In"
+  fill_in "Username", with: "ExampleKid"
+  fill_in "Password", with: "examplekid"
+  click_button "Log in"
+end
