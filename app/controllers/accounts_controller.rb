@@ -20,7 +20,7 @@ class AccountsController < ApplicationController
 
   def show
     @account = Account.find(params[:id])
-    @transactions = @account.transactions.order(created_at: :desc).paginate(page: params[:page], per_page: 10)
+    @transactions = @account.transactions.search(params[:search]).order(created_at: :desc).paginate(page: params[:page], per_page: 10)
     @chart_data = @account.transactions.transaction_chart_data(@account)
   end
 

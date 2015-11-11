@@ -1,6 +1,13 @@
 
+
 <div class="panel panel-default" id="transactions_table">
   <h4>Transaction History</h4>
+  <%= form_tag child_account_path(@child, @account), :method => 'get' do  %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+  <% end %>
   <table class="table table-striped" id="transactions">
 
     <tr>

@@ -7,6 +7,7 @@ class TransactionsController < ApplicationController
   end
 
   def create
+    @chart_data = @account.transactions.transaction_chart_data(@account)
     if transaction_params[:transaction_type].=="Withdrawal"
       amount = transaction_params[:amount].to_f.abs.*(-1)
     else

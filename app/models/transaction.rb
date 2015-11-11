@@ -16,4 +16,12 @@ class Transaction < ActiveRecord::Base
       }
     end
   end
+
+  def self.search(search)
+    if search != ""
+      where('description LIKE ?', "%#{search}%")
+    else
+     self.all
+   end
+  end
 end
