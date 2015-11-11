@@ -1,7 +1,7 @@
 <h2> <%= @child.first_name %>'s Account </h2>
 
-<p> Beginning Balance: <%= @account.beginning_balance %></p>
-<p>Current balance: <span id="balance"><%= @account.total %> </p></span>
+<p> Beginning Balance: <%=number_to_currency @account.beginning_balance %></p>
+<p>Current balance: <span id="balance"><%=number_to_currency @account.total %> </p></span>
 <br>
 
 <% if current_parent %>

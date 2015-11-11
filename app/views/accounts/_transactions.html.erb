@@ -22,7 +22,7 @@
         <td><%= transaction.account.child.username %></td>
         <td><%= transaction.transaction_type %></td>
         <td><%= transaction.description %></td>
-        <td>$ <%= transaction.amount %></td>
+        <td><%= number_to_currency transaction.amount %></td>
 
       </tr>
     <% end %>

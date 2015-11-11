@@ -4,4 +4,4 @@ $("#requests").append(" <tr> <td><%= @request.created_at.strftime("%m-%d-%Y") %>
                      "<td><%= @request.child.username %></td>" +
                      "<td><%=@request.request_type%></td>" +
                      "<td><%=@request.description%></td>" +
-                     "<td><%=@request.amount%></td>" + "</tr>");
+                     "<td><%=number_to_currency@request.amount%></td>" + "</tr>");
