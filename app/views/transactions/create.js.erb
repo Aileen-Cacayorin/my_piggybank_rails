@@ -1,8 +1,9 @@
 $('#modal_form').modal("hide");
 $('#new_transaction_link').show()
-$("#transactions").append(" <tr>" + "<td><%= @transaction.created_at.strftime("%m-%d-%Y") %></td>" +
+$("#transactions tr:first").after(" <tr>" + "<td><%= @transaction.created_at.strftime("%m-%d-%Y") %></td>" +
                      "<td><%= @transaction.account.child.username %></td>" +
                      "<td><%=@transaction.transaction_type%></td>" +
                      "<td><%=@transaction.description%></td>" +
                      "<td><%=@transaction.amount%></td>" + "</tr>");
 $("#balance").html("<%=@account.total%>");
+drawChart()

@@ -13,6 +13,9 @@
   <% if @transactions.any? %>
 
   <%= will_paginate @transactions %>
+  <div class="transaction_rows">
+
+
     <% @transactions.each do |transaction| %>
       <tr id="transaction_<%=transaction.id%>">
         <td><%= transaction.created_at.strftime("%m-%d-%Y") %></td>
@@ -23,6 +26,7 @@
 
       </tr>
     <% end %>
+  </div>
   </table>
   <% end %>
 </div>

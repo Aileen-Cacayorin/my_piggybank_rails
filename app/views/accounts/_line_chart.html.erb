@@ -18,8 +18,9 @@
            <% @chart_data.each do |day| %>
            [ new Date ('<%= day[:date] %>'),( <%= day[:total] %>)],
            <% end %>
-
+        
         ]);
+
 
        var options = {
          title: 'Transaction History',

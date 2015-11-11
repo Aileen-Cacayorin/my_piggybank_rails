@@ -36,11 +36,25 @@ test_account = Account.create(
   child_id: "#{test_child.id}"
 )
 
+fake_child = Child.create(
+  username: "fakechild",
+  password: "fakechild",
+  password_confirmation: "fakechild",
+  first_name: "fake",
+  last_name: "child",
+  bank_id: "#{test_bank.id}"
+)
+
+fake_account = Account.create(
+  beginning_balance: 50.00,
+  child_id: "#{fake_child.id}"
+)
+
 10.times do |n|
   n = Transaction.create(
     description: %w[j k i e r e z n a x y q u o p z y e].sample(10).join(""),
     transaction_type: "Deposit",
-    amount: 5.25,
+    amount: (rand * 30),
     account_id: "#{test_account.id}"
   )
 
@@ -53,8 +67,32 @@ end
   n = Transaction.create(
     description: %w[j k i e r e z n a x y q u o p z y e].sample(10).join(""),
     transaction_type: "Withdrawal",
-    amount: -5.25,
+    amount: -(rand * 30),
     account_id: "#{test_account.id}"
+  )
+  n.created_at = (rand*30).days.ago.to_time
+  n.save
+end
+
+10.times do |n|
+  n = Transaction.create(
+    description: %w[j k i e r e z n a x y q u o p z y e].sample(10).join(""),
+    transaction_type: "Deposit",
+    amount: (rand * 30),
+    account_id: "#{fake_account.id}"
+  )
+
+  n.created_at = (rand * 30).day.ago.to_time
+  n.save
+
+end
+
+6.times do |n|
+  n = Transaction.create(
+    description: %w[j k i e r e z n a x y q u o p z y e].sample(10).join(""),
+    transaction_type: "Withdrawal",
+    amount: -(rand * 50),
+    account_id: "#{fake_account.id}"
   )
   n.created_at = (rand*30).days.ago.to_time
   n.save

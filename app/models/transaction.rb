@@ -10,8 +10,8 @@ class Transaction < ActiveRecord::Base
     end_date = Date.today
     days = (end_date - start_date).ceil
 
-    (30.day.ago.to_date..Date.today).map do |date|
-      { date:  date,
+    (30.day.ago.to_date..Date.today.tomorrow).map do |date|
+      { date:  date.in_time_zone,
         total:  self.where(:created_at => 30.day.ago..date.end_of_day).sum(:amount).to_f + account.beginning_balance
       }
     end
