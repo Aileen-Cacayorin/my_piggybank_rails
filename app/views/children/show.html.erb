@@ -24,7 +24,7 @@
 
 
   <p><%= link_to "Request a Transaction", new_request_path(:child => @child.id, :parent => @child.parent.id), remote: true, id: "transaction_request_link" %></p>
-  <%= render 'requests/modal' %>
+  <%= render 'layouts/modal' %>
 
 
   <%= render "requests/requests" %>

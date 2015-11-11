@@ -6,6 +6,7 @@
 
 <% if current_parent %>
 <%= link_to "Make a transaction", new_account_transaction_path(@account), id: "new_transaction_link", remote: true %>
+<%= render 'layouts/modal' %>
 <% end %>
 
 
