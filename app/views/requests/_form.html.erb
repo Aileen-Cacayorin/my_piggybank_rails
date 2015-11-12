@@ -2,7 +2,7 @@
 
 <%= form_for @request, remote: true do |f| %>
 <div class="form-group">
-    <%= f.label :description %>
+    <%= f.label :description, "What is this money for?" %>
     <%= f.text_field :description %>
 </div>
 

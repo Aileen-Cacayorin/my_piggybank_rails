@@ -1,7 +1,7 @@
-<div class="child_page">
+<body class="child_page">
   <div class="container-fluid" >
-    <div class="row">
-      <div class="col-md-5" id="left_column">
+    <div class="row" id="child_page_view">
+      <div class="col-md-5 panel panel-default" id="left_column">
         <h2><%=@child.first_name %>, you have saved</h2>
         <h1><%=number_to_currency @account.total %> !</h1>
         <p> Starting Balance: <%=number_to_currency @account.beginning_balance %> </p>
@@ -13,19 +13,20 @@
         <div id="child_transaction_view">
           <% if @account %>
             <%= render 'accounts/transactions' %>
-
-
           <% else %>
             <h3>No account yet. Ask your parent to start an account for you.</h3>
           <% end %>
         </div>
+        <p><%= link_to "Request a Transaction", new_request_path(:child => @child.id, :parent => @child.parent.id), remote: true, id: "transaction_request_link" %></p>
+        <%= render 'layouts/modal' %>
+
+        <div class="child_request_view">
+          <%= render "requests/requests" %>
+        </div>
+
     </div>
   </div>
 
 
-  <p><%= link_to "Request a Transaction", new_request_path(:child => @child.id, :parent => @child.parent.id), remote: true, id: "transaction_request_link" %></p>
-  <%= render 'layouts/modal' %>
 
-
-  <%= render "requests/requests" %>
-</div>
+</body>

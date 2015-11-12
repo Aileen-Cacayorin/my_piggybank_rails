@@ -1,6 +1,6 @@
-<div id="requests_table">
-  <h4> Pending Requests</h4>
-  <table class="table" id="requests">
+<div "panel panel-default" id="requests_table">
+  <h3> Pending Requests</h3>
+  <table class="table table-striped" id="requests">
 
     <tr>
       <th>Date requested</th>
@@ -24,6 +24,8 @@
 
       </tr>
     <% end %>
+  <% else %>
+      <h5>No Pending Requests</h5>
   </table>
   <% end %>
 </div>

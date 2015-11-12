@@ -1,5 +1,12 @@
 .child_page {
   background-color: #60CA95;
+  height: 100%;
+}
+
+#child_page_view {
+  margin-top: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 #transaction_chart {
@@ -9,17 +16,20 @@
 }
 
 #left_column {
-  margin: auto;
+  margin-left: auto;
   padding: 20px;
   text-align: center;
+  border-width: thin;
+  border-style: solid;
 }
 
-#child_transaction_view {
 
-
-}
 
 #child_transaction_view .panel {
-  margin-top: 200px;
+  padding: 25px;
+}
+
+.child_request_view  {
+  background-color: white;
   padding: 25px;
 }
