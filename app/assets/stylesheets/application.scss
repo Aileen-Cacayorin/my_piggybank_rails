@@ -3,11 +3,17 @@
 @import "bootstrap";
 @import 'static_pages';
 @import 'child_page';
+@import 'parent_bank_view';
 
+
+#child_list{
+  list-style: none;
+}
 
 #hide_child_transactions {
   display: none;
 }
+
 
 /*flash*/
 .alert-error {

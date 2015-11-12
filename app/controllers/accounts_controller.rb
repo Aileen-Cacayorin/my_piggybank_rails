@@ -21,9 +21,11 @@ class AccountsController < ApplicationController
   def show
     @account = Account.find(params[:id])
     @chart_data = @account.transactions.transaction_chart_data(@account)
+
     @transactions = @account.transactions.search(params[:search]).order(created_at: :desc).paginate(page: params[:page], per_page: 10)
+    
     respond_to do |format|
-    format.html 
+    format.html
     format.js
     end
   end

@@ -19,32 +19,7 @@
     <% end %>
   <% else %>
   <% end %>
-  <table class="table table-striped" id="transactions">
-
-    <tr>
-      <th>Date </th>
-      <th>Username</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Amount </th>
-    </tr>
-  <% if @transactions.any? %>
-
-  <%= will_paginate @transactions %>
-  <div class="transaction_rows">
-
-
-    <% @transactions.each do |transaction| %>
-      <tr id="transaction_<%=transaction.id%>">
-        <td><%= transaction.created_at.strftime("%m-%d-%Y") %></td>
-        <td><%= transaction.account.child.username %></td>
-        <td><%= transaction.transaction_type %></td>
-        <td><%= transaction.description %></td>
-        <td><%= number_to_currency transaction.amount %></td>
-
-      </tr>
-    <% end %>
+  <div id="transactions">
+    <%= render 'accounts/transactions_list' %>
   </div>
-  </table>
-  <% end %>
 </div>

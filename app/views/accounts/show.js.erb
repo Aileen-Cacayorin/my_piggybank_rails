@@ -7,3 +7,6 @@ $('#hide_child_transactions').click(function(){
   $('#transactions_table').hide()
   $('#hide_child_transactions').hide()
 })
+
+
+$('#transactions').html('<%= escape_javascript(render("transactions")) %>');
