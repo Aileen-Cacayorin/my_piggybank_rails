@@ -28,10 +28,11 @@
   <h3>Account Activity</h3>
 
   <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
-
-  <%= line_chart @children.map{|child|
+  <% if @bank.transactions.any? %>
+    <%= line_chart @children.map{|child|
       {name: child.first_name, data: child.account.transactions.group_by_day(:created_at).sum(:amount)}
-  } %>
+    } %>
+  <% end %>
 
   <div class="parent_request_view">
     <%= render "requests/requests" %>
