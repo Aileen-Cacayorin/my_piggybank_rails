@@ -8,26 +8,26 @@
 
 
 test_parent = Parent.create(
-  username: "username",
-  email: "username@gmail.com",
+  username: "janedoe",
+  email: "janedoe@gmail.com",
   password: "password",
   password_confirmation: "password",
-  first_name: "user",
-  last_name: "name"
+  first_name: "Jane",
+  last_name: "Doe"
 )
 
 test_bank = Bank.create(
-  name: "Test Bank",
+  name: "Bank of Doe",
   parent_id: "#{test_parent.id}"
 
 )
 
 test_child = Child.create(
-  username: "testchild",
-  password: "fakefake",
-  password_confirmation: "fakefake",
-  first_name: "test",
-  last_name: "child",
+  username: "averydoe",
+  password: "averydoe",
+  password_confirmation: "averydoe",
+  first_name: "Avery",
+  last_name: "Doe",
   bank_id: "#{test_bank.id}"
 )
 
@@ -37,11 +37,11 @@ test_account = Account.create(
 )
 
 fake_child = Child.create(
-  username: "fakechild",
-  password: "fakechild",
-  password_confirmation: "fakechild",
-  first_name: "fake",
-  last_name: "child",
+  username: "thomasdoe",
+  password: "thomasdoe",
+  password_confirmation: "thomasdoe",
+  first_name: "Thomas",
+  last_name: "Doe",
   bank_id: "#{test_bank.id}"
 )
 
