@@ -8,6 +8,11 @@
         <div class="transaction_chart">
           <%= render 'accounts/line_chart' %>
         </div>
+        <div id="request_buttons">
+          <p><%= link_to "Save Money", new_request_path(:child => @child.id, :parent => @child.parent.id, :deposit => true),  remote: true, id: "transaction_request_link" %></p>
+          <p><%= link_to "Get Money", new_request_path(:child => @child.id, :parent => @child.parent.id, :withdrawal => true), remote: true, id: "transaction_request_link" %></p>
+          <%= render 'layouts/modal' %>
+        </div>
       </div>
       <div class="col-md-7">
         <div id="child_transaction_view">
@@ -24,8 +29,7 @@
             <h3>No account yet. Ask your parent to start an account for you.</h3>
           <% end %>
         </div>
-        <p><%= link_to "Request a Transaction", new_request_path(:child => @child.id, :parent => @child.parent.id), remote: true, id: "transaction_request_link" %></p>
-        <%= render 'layouts/modal' %>
+
 
         <div class="child_request_view">
           <%= render "requests/requests" %>

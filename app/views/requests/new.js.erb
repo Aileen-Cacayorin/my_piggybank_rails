@@ -1,4 +1,10 @@
-$('.modal-title').html("Request a Deposit or Withdrawal");
+
+<% if params[:deposit] == "true" %>
+  $('.modal-title').html("Request a Deposit");
+
+<% elsif params[:withdrawal] == "true" %>
+  $('.modal-title').html("Request a Withdrawal");
+<% end %>
 
 $('.modal-body').html('<%= j render("form") %>');
 

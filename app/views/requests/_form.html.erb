@@ -6,13 +6,6 @@
     <%= f.text_field :description %>
 </div>
 
-<div class="form-group">
-    <%= f.label :request_type, "Request Type:" %>
-    <%= f.label "Deposit" %>
-    <%= f.radio_button :request_type, "Deposit", value: "Deposit"  %>
-    <%= f.label "Withdrawal" %>
-    <%= f.radio_button :request_type, "Withdrawal", value: "Withdrawal" %>
-</div>
 
 <div class="form-group">
     <%= f.label :amount %>
@@ -21,6 +14,12 @@
 
     <%= f.hidden_field :parent_id, :value => Parent.find(params[:parent]).id %>
     <%= f.hidden_field :child_id, :value => Child.find(params[:child]).id %>
+
+    <% if params[:deposit] == "true" %>
+      <%= f.hidden_field :request_type, :value => "Deposit" %>
+    <% elsif params[:withdrawal] == "true" %>
+      <%= f.hidden_field :request_type, :value => "Withdrawal" %>
+    <% end %>
 
 <%= f.submit "Request transaction" %>
 
