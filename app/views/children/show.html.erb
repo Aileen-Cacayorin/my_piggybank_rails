@@ -2,13 +2,14 @@
   <div class="container-fluid" >
     <div class="row" id="child_page_view">
       <% if @account %>
-      <div class="col-md-5 panel panel-default" id="left_column">
-
-        <h2><%=@child.first_name %>, you have saved</h2>
-        <h1><%=number_to_currency @account.total %> !</h1>
-        <p> Starting Balance: <%=number_to_currency @account.beginning_balance %> </p>
-        <div class="transaction_chart">
-          <%= render 'accounts/line_chart' %>
+      <div class="col-md-5" id="left_column">
+        <div class="panel panel-default" id="left_column_chart">
+          <h2><%=@child.first_name %>, you have saved</h2>
+          <h1><%=number_to_currency @account.total %> !</h1>
+          <p> Starting Balance: <%=number_to_currency @account.beginning_balance %> </p>
+          <div class="transaction_chart">
+            <%= render 'accounts/line_chart' %>
+          </div>
         </div>
         <div id="request_buttons">
           <p><%= link_to "Save Money", new_request_path(:child => @child.id, :parent => @child.parent.id, :deposit => true),  remote: true, id: "transaction_request_link" %></p>
