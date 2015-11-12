@@ -16,7 +16,12 @@
   </div>
 </div>
 
-<div class="transaction_chart">
+<div id="parent_transaction_chart_view">
+  <div id="parent_chart_view">
+  <script type="text/javascript">
+    google.load('visualization', '1', {'packages':['corechart']});
+  </script>
+    <%= render 'line_chart' %>
+  </div>
 
-  <%= render 'line_chart' %>
 </div>

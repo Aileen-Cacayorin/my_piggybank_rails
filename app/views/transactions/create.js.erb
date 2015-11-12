@@ -1,9 +1,11 @@
 $('#modal_form').modal("hide");
-$('#new_transaction_link').show()
+$('#new_transaction_link').show();
 $("#transactions tr:first").after(" <tr>" + "<td><%= @transaction.created_at.strftime("%m-%d-%Y") %></td>" +
                      "<td><%= @transaction.account.child.username %></td>" +
                      "<td><%=@transaction.transaction_type%></td>" +
                      "<td><%=@transaction.description%></td>" +
                      "<td><%=number_to_currency @transaction.amount%></td>" + "</tr>");
 $("#balance").html("<%=@account.total%>");
-drawChart();
+$('#parent_transaction_chart_view').empty();
+google.load('visualization', '1', {'packages':['corechart']});
+$('#parent_transaction_chart_view').html("<%= j render('accounts/line_chart')%>");

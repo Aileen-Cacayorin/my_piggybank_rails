@@ -7,6 +7,7 @@ class TransactionsController < ApplicationController
   end
 
   def create
+
     if transaction_params[:transaction_type].=="Withdrawal"
       amount = transaction_params[:amount].to_f.abs.*(-1)
     else
@@ -15,6 +16,7 @@ class TransactionsController < ApplicationController
     @transaction = Transaction.create(:description =>transaction_params[:description], :transaction_type => transaction_params[:transaction_type], :amount => amount, :bank_id => transaction_params[:bank_id] )
     @transaction.account = @account
     @transaction.save
+    @chart_data = @account.transactions.transaction_chart_data(@account)
     if transaction_params[:request_id]
       @request = Request.find(transaction_params[:request_id])
       @request.destroy
