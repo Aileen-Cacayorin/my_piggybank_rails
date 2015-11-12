@@ -13,9 +13,11 @@
         <div id="child_transaction_view">
           <% if @account %>
 
-          <%= render 'accounts/transactions' %>
-          <div id="transactions">
-            <%= render 'accounts/transactions_list' %>
+          <div class="panel panel-default" id="transactions_table">
+            <%= render 'accounts/transactions' %>
+            <div id="transactions">
+              <%= render 'accounts/transactions_list' %>
+            </div>
           </div>
 
           <% else %>

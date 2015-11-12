@@ -1,6 +1,6 @@
 
 
-<div class="panel panel-default" id="transactions_table">
+
   <h4>Transaction History</h4>
   <% if parent_signed_in?%>
     <%= form_tag child_account_path(@child, @account), :method => 'get', id: "transactions_search", remote: true do %>
@@ -19,4 +19,3 @@
     <% end %>
   <% else %>
   <% end %>
-</div>
