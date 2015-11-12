@@ -9,6 +9,10 @@ class ChildrenController < ApplicationController
       @transactions = @account.transactions.search(params[:search]).order(created_at: :desc).paginate(page: params[:page], per_page: 10)
       @requests = @child.requests
       @chart_data = @account.transactions.transaction_chart_data(@account)
+      respond_to do |format|
+        format.html
+        format.js
+      end
     end
   end
 
