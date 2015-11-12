@@ -3,12 +3,10 @@ class TransactionsController < ApplicationController
     before_action :set_default
 
   def new
-    binding.pry
     @transaction = Transaction.new
   end
 
   def create
-    binding.pry
     if transaction_params[:transaction_type].=="Withdrawal"
       amount = transaction_params[:amount].to_f.abs.*(-1)
     else
