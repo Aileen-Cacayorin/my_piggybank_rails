@@ -18,3 +18,14 @@
 
 //= require turbolinks
 //= require_tree .
+
+
+
+$(function() {
+
+  $('#transactions_search input').keyup(function () {
+    $.get($("#transactions_search").attr("action"), $("#transactions_search").serialize(), null, "script");
+    return false;
+  });
+
+});

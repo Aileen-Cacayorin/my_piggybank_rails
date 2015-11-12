@@ -9,8 +9,12 @@
 <%= render 'layouts/modal' %>
 <% end %>
 
-
-<%= render 'transactions' %>
+<div class="panel panel-default" id="transactions_table">
+  <%= render 'accounts/transactions' %>
+  <div id="transactions">
+    <%= render 'accounts/transactions_list' %>
+  </div>
+</div>
 
 <div class="transaction_chart">
 

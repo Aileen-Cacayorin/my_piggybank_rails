@@ -12,7 +12,14 @@
       <div class="col-md-7">
         <div id="child_transaction_view">
           <% if @account %>
+
+          <div class="panel panel-default" id="transactions_table">
             <%= render 'accounts/transactions' %>
+            <div id="transactions">
+              <%= render 'accounts/transactions_list' %>
+            </div>
+          </div>
+
           <% else %>
             <h3>No account yet. Ask your parent to start an account for you.</h3>
           <% end %>

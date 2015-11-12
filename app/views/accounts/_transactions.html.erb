@@ -1,9 +1,9 @@
 
 
-<div class="panel panel-default" id="transactions_table">
+
   <h4>Transaction History</h4>
   <% if parent_signed_in?%>
-    <%= form_tag child_account_path(@child, @account), :method => 'get' do  %>
+    <%= form_tag child_account_path(@child, @account), :method => 'get', id: "transactions_search", remote: true do %>
     <p>
       <%= text_field_tag :search, params[:search] %>
       <%= submit_tag "Search", :name => nil %>
@@ -11,7 +11,7 @@
     <% end %>
 
   <% elsif child_signed_in? %>
-    <%= form_tag bank_child_path(@bank, @child), :method => 'get' do  %>
+    <%= form_tag bank_child_path(@bank, @child), :method => 'get', id: "transactions_search", remote: true do  %>
     <p>
       <%= text_field_tag :search, params[:search] %>
       <%= submit_tag "Search", :name => nil %>
@@ -19,32 +19,3 @@
     <% end %>
   <% else %>
   <% end %>
-  <table class="table table-striped" id="transactions">
-
-    <tr>
-      <th>Date </th>
-      <th>Username</th>
-      <th>Type</th>
-      <th>Description</th>
-      <th>Amount </th>
-    </tr>
-  <% if @transactions.any? %>
-
-  <%= will_paginate @transactions %>
-  <div class="transaction_rows">
-
-
-    <% @transactions.each do |transaction| %>
-      <tr id="transaction_<%=transaction.id%>">
-        <td><%= transaction.created_at.strftime("%m-%d-%Y") %></td>
-        <td><%= transaction.account.child.username %></td>
-        <td><%= transaction.transaction_type %></td>
-        <td><%= transaction.description %></td>
-        <td><%= number_to_currency transaction.amount %></td>
-
-      </tr>
-    <% end %>
-  </div>
-  </table>
-  <% end %>
-</div>
