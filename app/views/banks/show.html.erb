@@ -1,26 +1,36 @@
 <h2>This is <%= @parent.username %>'s bank </h2>
 <h2>Bank name: <%= @bank.name %> </h2>
 
+<div class="col-md-4">
 
+  <%= link_to "Add a child to your bank", new_child_registration_path(:bank => @bank.id)   %>
 
-<%= link_to "Add a child to your bank", new_child_registration_path(:bank => @bank.id)   %>
-
-
-<% if @bank.children.any? %>
-<ul>
-  <% @bank.children.each do |child| %>
-    <li><%= child.username %> <span id="show_view_account_<%=child.id%>"></span>
-    <% if !child.account %>
-      <%= link_to "Start Account", new_child_account_path(child), id: "new_account_#{child.id}", remote: true %>
-    <% else %>
-      <%= link_to "View Account", child_account_path(child, child.account), id: "view_account_#{child.id}"  %>
+  <% if @bank.children.any? %>
+  <ul>
+    <% @bank.children.each do |child| %>
+      <li><%= child.username %> <span id="show_view_account_<%=child.id%>"></span>
+      <% if !child.account %>
+        <%= link_to "Start Account", new_child_account_path(child), id: "new_account_#{child.id}", remote: true %>
+      <% else %>
+        <%= link_to "View Account", child_account_path(child, child.account), id: "view_account_#{child.id}"  %>
+      <% end %>
+      </li>
     <% end %>
-    </li>
+  </ul>
+
   <% end %>
-</ul>
+</div>
 
-<% end %>
+<div class="col-md-8">
 
-<% if @requests.any? %>
-  <%= render "requests/requests" %>
-<% end %>
+  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+
+  <%= line_chart @children.map{|child|
+      {name: child.first_name, data: child.account.transactions.group_by_day(:created_at).sum(:amount)}
+  } %>
+
+  <% if @requests.any? %>
+    <%= render "requests/requests" %>
+  <% end %>
+
+</div>

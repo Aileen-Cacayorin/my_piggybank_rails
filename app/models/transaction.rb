@@ -24,4 +24,8 @@ class Transaction < ActiveRecord::Base
      self.all
    end
   end
+
+  
+
+
 end
