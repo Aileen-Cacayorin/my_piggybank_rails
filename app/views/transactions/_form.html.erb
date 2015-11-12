@@ -12,6 +12,7 @@
     <%= f.radio_button :transaction_type, "Deposit", value: "Deposit"  %>
     <%= f.label "Withdrawal" %>
     <%= f.radio_button :transaction_type, "Withdrawal", value: "Withdrawal" %>
+    <%= f.hidden_field :bank_id, :value => Bank.find(params[:bank]).id  %>
 </div>
 
 <div class="form-group">

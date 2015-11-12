@@ -3,17 +3,18 @@ class TransactionsController < ApplicationController
     before_action :set_default
 
   def new
+    binding.pry
     @transaction = Transaction.new
   end
 
   def create
-    @chart_data = @account.transactions.transaction_chart_data(@account)
+    binding.pry
     if transaction_params[:transaction_type].=="Withdrawal"
       amount = transaction_params[:amount].to_f.abs.*(-1)
     else
       amount = transaction_params[:amount].to_f
     end
-    @transaction = Transaction.create(:description =>transaction_params[:description], :transaction_type => transaction_params[:transaction_type], :amount => amount )
+    @transaction = Transaction.create(:description =>transaction_params[:description], :transaction_type => transaction_params[:transaction_type], :amount => amount, :bank_id => transaction_params[:bank_id] )
     @transaction.account = @account
     @transaction.save
     if transaction_params[:request_id]
@@ -35,7 +36,7 @@ class TransactionsController < ApplicationController
 private
 
   def transaction_params
-    params.require(:transaction).permit(:amount, :transaction_type, :description, :request_id)
+    params.require(:transaction).permit(:amount, :transaction_type, :description, :request_id, :bank_id)
   end
 
   def set_default
