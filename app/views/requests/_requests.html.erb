@@ -19,7 +19,7 @@
         <td><%= request.description %></td>
         <td><%= number_to_currency request.amount %></td>
         <% if current_parent %>
-        <td><%= button_to "Approve", account_transactions_path(request.child.account, transaction: { :transaction_type => request.request_type, :description => request.description, :amount => request.amount, :request_id => request.id}), method: :post %></td>
+        <td><%= button_to "Approve", account_transactions_path(request.child.account, transaction: { :transaction_type => request.request_type, :description => request.description, :amount => request.amount, :request_id => request.id, :bank_id => request.child.bank.id}), method: :post %></td>
         <% end %>
 
       </tr>

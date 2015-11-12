@@ -55,7 +55,8 @@ fake_account = Account.create(
     description: %w[j k i e r e z n a x y q u o p z y e].sample(10).join(""),
     transaction_type: "Deposit",
     amount: (rand * 30),
-    account_id: "#{test_account.id}"
+    account_id: "#{test_account.id}",
+    bank_id: "#{test_bank.id}"
   )
 
   n.created_at = (rand * 30).day.ago.to_time
@@ -68,7 +69,8 @@ end
     description: %w[j k i e r e z n a x y q u o p z y e].sample(10).join(""),
     transaction_type: "Withdrawal",
     amount: -(rand * 30),
-    account_id: "#{test_account.id}"
+    account_id: "#{test_account.id}",
+    bank_id: "#{test_bank.id}"
   )
   n.created_at = (rand*30).days.ago.to_time
   n.save
@@ -79,7 +81,8 @@ end
     description: %w[j k i e r e z n a x y q u o p z y e].sample(10).join(""),
     transaction_type: "Deposit",
     amount: (rand * 30),
-    account_id: "#{fake_account.id}"
+    account_id: "#{fake_account.id}",
+    bank_id: "#{test_bank.id}"
   )
 
   n.created_at = (rand * 30).day.ago.to_time
@@ -92,7 +95,8 @@ end
     description: %w[j k i e r e z n a x y q u o p z y e].sample(10).join(""),
     transaction_type: "Withdrawal",
     amount: -(rand * 50),
-    account_id: "#{fake_account.id}"
+    account_id: "#{fake_account.id}",
+    bank_id: "#{test_bank.id}"
   )
   n.created_at = (rand*30).days.ago.to_time
   n.save
