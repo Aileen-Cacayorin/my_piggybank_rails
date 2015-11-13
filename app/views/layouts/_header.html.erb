@@ -8,7 +8,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to 'My PiggyBank', root_path, class: "navbar-brand" %>
+      <%=link_to root_path do %>
+        <%= image_tag 'Drawing.png', id: "nav-logo", class: "pull-left"%>
+        <span class="navbar-brand">My Piggy Bank</span>
+      <% end %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -29,7 +32,7 @@
 
           <% else child_signed_in? %>
             <ul class="nav navbar-nav navbar-right">
-              <li> <%=link_to "Logged in as #{current_child.username}", bank_child_path(current_child.bank, current_child) %></li>
+              <li> <%=link_to "My Account (#{current_child.username})", bank_child_path(current_child.bank, current_child) %></li>
               <li><%= link_to "Log Out", destroy_child_session_path, :method => :delete%></li>
             </ul>
           <% end %>

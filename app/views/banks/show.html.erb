@@ -1,6 +1,5 @@
 
-
-<div class="col-md-4" id="list_column">
+<div class="col-md-4 panel panel-default" id="list_column">
   <h1><%= @bank.name %> </h1>
 
 
@@ -24,8 +23,8 @@
   <% end %>
 </div>
 
-<div class="col-md-8">
-  <h3>Account Activity</h3>
+<div class="col-md-7">
+  <center><h3>Bank Activity</h3></center>
 
   <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
   <% if @bank.transactions.any? %>

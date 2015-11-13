@@ -1,6 +1,6 @@
-<div id="transaction_chart" style="width: 500px; height: 300px"></div>
+<div id="transaction_chart" ></div>
 <script type="text/javascript">
-  
+
   $(function() {
     drawChart();
   });
@@ -24,4 +24,10 @@
      var chart = new google.visualization.LineChart(document.getElementById('transaction_chart'));
      chart.draw(data, options);
      }
+
+     $(document).ready(function () {
+      $(window).resize(function(){
+        drawChart();
+      });
+    });
 </script>

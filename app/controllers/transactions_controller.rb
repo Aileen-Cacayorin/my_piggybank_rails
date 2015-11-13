@@ -7,7 +7,6 @@ class TransactionsController < ApplicationController
   end
 
   def create
-
     if transaction_params[:transaction_type].=="Withdrawal"
       amount = transaction_params[:amount].to_f.abs.*(-1)
     else
@@ -27,14 +26,12 @@ class TransactionsController < ApplicationController
       format.js
       end
     end
-
   end
 
   def show
   end
 
 private
-
   def transaction_params
     params.require(:transaction).permit(:amount, :transaction_type, :description, :request_id, :bank_id)
   end
@@ -42,5 +39,4 @@ private
   def set_default
     @account = Account.find(params[:account_id])
   end
-
 end

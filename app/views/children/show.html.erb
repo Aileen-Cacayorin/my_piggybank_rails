@@ -1,41 +1,40 @@
 <body class="child_page">
   <div class="container-fluid" >
+    <h1 class="child_account_title"><%=@child.first_name %>'s Account</h1>
     <div class="row" id="child_page_view">
       <% if @account %>
-      <div class="col-md-5" id="left_column">
-        <div class="panel panel-default" id="left_column_chart">
-          <h2><%=@child.first_name %>, you have saved</h2>
-          <h1><%=number_to_currency @account.total %> !</h1>
-          <p> Starting Balance: <%=number_to_currency @account.beginning_balance %> </p>
-          <div class="transaction_chart">
-            <%= render 'accounts/line_chart' %>
-          </div>
-        </div>
-        <div id="request_buttons">
-          <p><%= link_to "Save Money", new_request_path(:child => @child.id, :parent => @child.parent.id, :deposit => true),  remote: true, id: "transaction_request_link" %></p>
-          <p><%= link_to "Get Money", new_request_path(:child => @child.id, :parent => @child.parent.id, :withdrawal => true), remote: true, id: "transaction_request_link" %></p>
-          <%= render 'layouts/modal' %>
-        </div>
-      </div>
-      <div class="col-md-7">
-        <div id="child_transaction_view">
+        <div class="col-md-5">
+          <div id="left_column">
 
-          <div class="panel panel-default" id="transactions_table">
-            <%= render 'accounts/transactions' %>
-            <div id="transactions">
-              <%= render 'accounts/transactions_list' %>
+            <h2><%=@child.first_name %>, you have saved</h2>
+            <h1><%=number_to_currency @account.total %> !</h1>
+            <p> Starting Balance: <%=number_to_currency @account.beginning_balance %> </p>
+            <div class="transaction_chart">
+              <%= render 'accounts/line_chart' %>
             </div>
           </div>
-          <div class="child_request_view">
-            <%= render "requests/requests" %>
+          <div id="request_buttons">
+            <p><%= link_to "Save Money", new_request_path(:child => @child.id, :parent => @child.parent.id, :deposit => true), class: "btn btn-success",  remote: true, id: "transaction_request_link" %></p>
+            <p><%= link_to "Get Money", new_request_path(:child => @child.id, :parent => @child.parent.id, :withdrawal => true), class: "btn btn-danger", remote: true, id: "transaction_request_link" %></p>
+            <%= render 'layouts/modal' %>
           </div>
         </div>
+        <div class="col-md-7">
+          <div id="child_transaction_view">
+            <div class="panel panel-default" id="transactions_table">
+              <%= render 'accounts/transactions' %>
+              <div id="transactions">
+                <%= render 'accounts/transactions_list' %>
+              </div>
+            </div>
+            <div class="child_request_view">
+              <%= render "requests/requests" %>
+            </div>
+          </div>
+        </div>
+      <% else %>
+        <h3>No account yet. Ask your parent to start an account for you.</h3>
+      <% end %>
     </div>
-    <% else %>
-    <h3>No account yet. Ask your parent to start an account for you.</h3>
-    <% end %>
   </div>
-
-
-
 </body>

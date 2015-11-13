@@ -5,9 +5,20 @@
 @import 'child_page';
 @import 'parent_bank_view';
 
-
+// navigation
 .navbar {
   padding: 20px;
+  font-family: 'Wellfleet', cursive;
+}
+
+.navbar-header {
+  font-size: 30px;
+}
+
+#nav-logo {
+  max-width: 50px;
+  max-height: 50px;
+  margin-right: 10px;
 }
 
 #child_list{
@@ -18,6 +29,11 @@
   display: none;
 }
 
+/*transaction chart*/
+#transaction_chart {
+  height: 400px;
+  width: 100%;
+}
 
 /*flash*/
 .alert-error {

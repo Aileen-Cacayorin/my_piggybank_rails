@@ -6,6 +6,7 @@ describe "the add transaction path", js: true do
     visit "/"
     click_link "My Bank (testperson)"
     click_link "View Account"
+    save_and_open_page
     click_link "Make a transaction"
     fill_in "Description", with: "Chores"
     choose('transaction_transaction_type_deposit')

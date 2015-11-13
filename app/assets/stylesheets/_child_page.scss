@@ -1,6 +1,7 @@
 .child_page {
   background-color: #60CA95;
   height: 100%;
+  font-family: 'Wellfleet', cursive;
 }
 
 #child_page_view {
@@ -20,13 +21,11 @@
   margin-left: auto;
   padding: 20px;
   text-align: center;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.8);
 }
 
-
-
 #child_transaction_view .panel {
-  padding: 25px;
+  
 }
 
 .child_request_view  {
@@ -43,6 +42,11 @@
 }
 
 
-#left_column_chart {
-  border: none;
+#request_buttons {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.child_account_title {
+  text-align: center;
 }

@@ -1,27 +1,32 @@
-<h2> <%= @child.first_name %>'s Account </h2>
 
-<p> Beginning Balance: <%=number_to_currency @account.beginning_balance %></p>
-<p>Current balance: <span id="balance"><%=number_to_currency @account.total %> </p></span>
-<br>
-
-<% if current_parent %>
-<%= link_to "Make a transaction", new_account_transaction_path(@account, :bank => "#{@child.bank.id}"), id: "new_transaction_link", remote: true %>
-<%= render 'layouts/modal' %>
-<% end %>
-
-<div class="panel panel-default" id="transactions_table">
-  <%= render 'accounts/transactions' %>
-  <div id="transactions">
-    <%= render 'accounts/transactions_list' %>
+<div class="row" id="parent_account_view">
+  <div class="col-md-4 panel panel-default">
+    <div class="parent_account_stats">
+      <h2> <%= @child.first_name %>'s Account </h2>
+      <h3>Current balance: <span id="balance"><%=number_to_currency @account.total %></span></h3>
+      <h5> Beginning Balance: <%=number_to_currency @account.beginning_balance %></h5>
+      <% if current_parent %>
+      <%= link_to "Make a transaction", new_account_transaction_path(@account, :bank => "#{@child.bank.id}"), id: "new_transaction_link", remote: true %>
+      <%= render 'layouts/modal' %>
+      <% end %>
+    </div>
+    <div id="parent_transaction_chart_view">
+      <div id="parent_chart_view">
+      <script type="text/javascript">
+        google.load('visualization', '1', {'packages':['corechart']});
+      </script>
+        <%= render 'line_chart' %>
+      </div>
+    </div>
   </div>
-</div>
-
-<div id="parent_transaction_chart_view">
-  <div id="parent_chart_view">
-  <script type="text/javascript">
-    google.load('visualization', '1', {'packages':['corechart']});
-  </script>
-    <%= render 'line_chart' %>
+  <div class="col-md-8">
+    <div id="parent_transactions_list_view">
+      <div class="panel panel-default" id="transactions_table">
+        <%= render 'accounts/transactions' %>
+        <div id="transactions">
+          <%= render 'accounts/transactions_list' %>
+        </div>
+      </div>
+    </div>
   </div>
-
 </div>

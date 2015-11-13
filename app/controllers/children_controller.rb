@@ -1,6 +1,7 @@
 class ChildrenController < ApplicationController
   before_action :authenticate_child!
   before_action :child_is_current_child
+
   def show
     @child = current_child
     @account = @child.account
@@ -17,7 +18,8 @@ class ChildrenController < ApplicationController
   end
 
 
-
+  private
+  
   def child_is_current_child
     unless current_child.id == params[:id].to_i
       flash[:danger] = "You may only view your own account."
