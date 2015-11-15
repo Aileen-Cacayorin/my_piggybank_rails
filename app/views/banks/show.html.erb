@@ -36,7 +36,6 @@
   <% if @bank.transactions.any? %>
     <%= line_chart @chart_children.map{|child|
       {name: child.first_name, data: child.account.transactions.group_by_day(:created_at).sum(:amount)}
-
     } %>
   <% end %>
 
