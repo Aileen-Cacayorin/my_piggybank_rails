@@ -24,7 +24,10 @@
 </div>
 
 <div class="col-md-7">
-  <center><h3>Bank Activity</h3></center>
+  <center>
+  <h3>Bank Activity</h3>
+  <h5>Transaction Totals by Week</h5>
+  </center>
 
   <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
   <script type="text/javascript">
@@ -33,6 +36,7 @@
   <% if @bank.transactions.any? %>
     <%= line_chart @chart_children.map{|child|
       {name: child.first_name, data: child.account.transactions.group_by_day(:created_at).sum(:amount)}
+
     } %>
   <% end %>
 
