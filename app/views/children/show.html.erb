@@ -1,12 +1,12 @@
 <body class="child_page">
   <div class="container-fluid" >
-    <h1 class="child_account_title"><%=@child.first_name %>'s Account</h1>
+    <h1 class="child_account_title"><%=@child.first_name.capitalize %>'s Account</h1>
     <div class="row" id="child_page_view">
       <% if @account %>
         <div class="col-md-5">
           <div id="left_column">
 
-            <h2><%=@child.first_name %>, you have saved</h2>
+            <h2><%=@child.first_name.capitalize %>, you have saved</h2>
             <h1><%=number_to_currency @account.total %> !</h1>
             <p> Starting Balance: <%=number_to_currency @account.beginning_balance %> </p>
             <div class="transaction_chart">

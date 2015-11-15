@@ -5,7 +5,7 @@ $("#transactions tr:first").after(" <tr>" + "<td><%= @transaction.created_at.str
                      "<td><%=@transaction.transaction_type%></td>" +
                      "<td><%=@transaction.description%></td>" +
                      "<td><%=number_to_currency @transaction.amount%></td>" + "</tr>");
-$("#balance").html("<%=@account.total%>");
+$("#balance").html("<%=number_to_currency @account.total%>");
 $('#parent_transaction_chart_view').empty();
 google.load('visualization', '1', {'packages':['corechart']});
 $('#parent_transaction_chart_view').html("<%= j render('accounts/line_chart')%>");

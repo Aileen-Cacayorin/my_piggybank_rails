@@ -3,11 +3,14 @@ require 'rails_helper'
 describe "the add transaction path", js: true do
   it 'creates a transaction' do
     add_account
-    visit "/"
-    click_link "My Bank (testperson)"
-    click_link "View Account"
+
+  sleep 2
+
+    click_on "View Account"
+    sleep 6
     save_and_open_page
-    click_link "Make a transaction"
+
+    click_link "new_transaction_link"
     fill_in "Description", with: "Chores"
     choose('transaction_transaction_type_deposit')
     fill_in "Amount", with: 12.25
