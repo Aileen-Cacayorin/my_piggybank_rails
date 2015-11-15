@@ -36,7 +36,6 @@ def add_account
   click_link "Start Account"
   fill_in "Beginning balance", with: "120.00"
   click_button "Submit"
-  page.should have_no_content "Start Account"
 
 end
 

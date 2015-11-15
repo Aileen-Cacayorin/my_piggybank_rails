@@ -27,8 +27,11 @@
   <center><h3>Bank Activity</h3></center>
 
   <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+  <script type="text/javascript">
+    google.load('visualization', '1', {'packages':['corechart']});
+  </script>
   <% if @bank.transactions.any? %>
-    <%= line_chart @children.map{|child|
+    <%= line_chart @chart_children.map{|child|
       {name: child.first_name, data: child.account.transactions.group_by_day(:created_at).sum(:amount)}
     } %>
   <% end %>

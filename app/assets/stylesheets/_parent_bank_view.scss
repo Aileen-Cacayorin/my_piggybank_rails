@@ -3,7 +3,7 @@
 }
 
 #parent_transactions_list_view {
-  margin-right: 25px;
+  margin: auto;
 }
 
 .parent_account_stats {
@@ -16,5 +16,9 @@
   max-width: 30%;
   padding: 0, 0, 0, 30px;
 
+}
 
+#parent_child_stats_panel {
+  margin-left: 3%;
+  margin-right: 2%
 }
