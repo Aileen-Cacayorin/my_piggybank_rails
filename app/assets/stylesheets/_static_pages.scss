@@ -2,9 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+// homepage
 .jumbotron {
-  // background-image:linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url(https://unsplash.it/1920/1080?image=822);
   height: 600px;
   margin-top: 0;
   background-size: 100% 100%;
@@ -15,10 +14,7 @@
   color: #fff;
   max-height: 500px;
   font-family: 'Wellfleet', cursive;
-
-
 }
-
 
 .jumbotron .intro-heading {
     color: #48CD8C;
@@ -39,4 +35,29 @@
     font-size: 22px;
     line-height: 22px;
     color: #48CD8C;
+}
+
+// aboutpage
+#about-image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-row {
+  padding-top: 25px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.about-row h2 {
+  text-align: center
+}
+
+.modal-img {
+  width: 90%;
+  height: 80%;
+
+}
+
+#step2 {
+  display: none;
 }
