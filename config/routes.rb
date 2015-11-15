@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get 'static_pages/help' 'help' => 'static_pages#help'
 
-  get 'static_pages/about' 'about' => 'static_pages#about'
+  get '/about'  => 'static_pages#about'
 
   devise_for :parents, controllers: { registrations: "parents/registrations", sessions: "parents/sessions" }
   devise_for :children, controllers: { sessions: "children/sessions", registrations: "children/registrations" }
