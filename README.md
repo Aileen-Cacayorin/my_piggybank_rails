@@ -22,7 +22,8 @@ To see child features, login with username: averydoe, passowrd: averydoe.
 ## Running / Development
 
 * `rails server`
-* Visit your app at [http://localhost:3000](http://localhost:3000).
+* Visit the app at [http://localhost:3000](http://localhost:3000). 
+* OR visit the app at [https://my-piggy-bank.herokuapp.com/]
 
 ### Technologies Used
 
