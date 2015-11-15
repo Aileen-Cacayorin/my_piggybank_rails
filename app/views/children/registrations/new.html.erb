@@ -1,40 +1,43 @@
-<h2>Sign up your child</h2>
+<div class="panel panel-default signup" >
 
-<%= form_for(resource, as: resource_name, url: child_registration_path) do |f| %>
-  <%= devise_error_messages! %>
-    <div class="field">
-      <%= f.label :username %><br />
-      <%= f.text_field :username, autofocus: true %>
+  <h2>Sign up your child</h2>
+
+  <%= form_for(resource, as: resource_name, url: child_registration_path) do |f| %>
+    <%= devise_error_messages! %>
+      <div class="field form-group">
+        <%= f.label :username %><br />
+        <%= f.text_field :username, autofocus: true, class: "form-control"  %>
+      </div>
+
+      <div class="field form-group">
+        <%= f.label :first_name %><br />
+        <%= f.text_field :first_name, autofocus: true, class: "form-control" %>
+      </div>
+
+      <div class="field form-group">
+        <%= f.label :last_name %><br />
+        <%= f.text_field :last_name, autofocus: true, class: "form-control" %>
+      </div>
+
+
+    <div class="field form-group">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
     </div>
 
-    <div class="field">
-      <%= f.label :first_name %><br />
-      <%= f.text_field :first_name, autofocus: true %>
+    <div class="field form-group">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
     </div>
 
-    <div class="field">
-      <%= f.label :last_name %><br />
-      <%= f.text_field :last_name, autofocus: true %>
+   <%=f.hidden_field :bank_id, :value => Bank.find(params[:bank]).id %>
+
+
+    <div class="actions">
+      <%= f.submit "Sign up" %>
     </div>
-
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
-
- <%=f.hidden_field :bank_id, :value => Bank.find(params[:bank]).id %>
-
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+  <% end %>
+</div>
