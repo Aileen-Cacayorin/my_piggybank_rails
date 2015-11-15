@@ -7,3 +7,31 @@
     My Piggy Bank is an online tool to help parents teach their kids about money. Parents create a family bank, add accounts for their children, and act as the banker. Parents can login, view their children's savings, account history, and approve transactions for allowances, chores, toys etc. Children can login to their account and view their curent savings. If is a child has actual cash to deposit or needs cash to spend, they can make a transaction request from their account. A parent can then log in, approve the request, exchange the money, and the new transacton is recorded.
   </p>
 </div>
+
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Getting Started</h4>
+      </div>
+      <div class="modal-body">
+        <div id="step1">
+          <p>1. Sign up for an account.</p>
+          <%= image_tag 'step1', class: "modal-img", id: "step1-img" %>
+          <p><button type="button" class="btn btn-primary pull-right" id="next1" data-remote=true>Next</button></p>
+        </div>
+        <div id="step2">
+          <p>2. Create your bank.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
