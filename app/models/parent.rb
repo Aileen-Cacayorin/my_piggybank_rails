@@ -1,8 +1,8 @@
 class Parent < ActiveRecord::Base
   attr_accessor :login
 
-  has_one :bank
-  has_many :requests
+  has_one :bank, dependent: :destroy
+  has_many :requests, dependent: :destroy
 
 
   validates :first_name, :presence => true
