@@ -38,7 +38,8 @@ To see child features, login with username: averydoe, passowrd: averydoe.
 * APIs: Google Charts
 
 ### Features to Add
-
+* Edit and delete user profiles
+* Password recovery
 * Automated transactions for allowance
 * Compound Interest
 * Transaction tags and sorting
