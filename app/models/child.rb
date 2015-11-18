@@ -1,7 +1,7 @@
 class Child < ActiveRecord::Base
   belongs_to :bank
-  has_one :account
-  has_many :requests
+  has_one :account, dependent: :destroy
+  has_many :requests, dependent: :destroy
 
   delegate :parent, to: :bank
 
