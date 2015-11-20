@@ -10,8 +10,12 @@ Warden.test_mode!
 require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
 options = {js_errors: false}
+# Capybara.register_driver :poltergeist do |app|
+#   Capybara::Poltergeist::Driver.new(app, options)
+# end
+require 'phantomjs'
 Capybara.register_driver :poltergeist do |app|
-  Capybara::Poltergeist::Driver.new(app, options)
+  Capybara::Poltergeist::Driver.new(app, :phantomjs => Phantomjs.path)
 end
 
 # Add additional requires below this line. Rails is not loaded until this point!
@@ -46,9 +50,9 @@ RSpec.configure do |config|
 
   config.before(:suite) do
   DatabaseCleaner.strategy = :truncation
-end
+  end
 
-config.around(:each) do |example|
+  config.around(:each) do |example|
   DatabaseCleaner.cleaning do
     example.run
   end

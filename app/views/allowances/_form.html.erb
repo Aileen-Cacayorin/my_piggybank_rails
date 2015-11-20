@@ -1,0 +1,10 @@
+<%= render "layouts/errors", :object => @allowance %>
+
+ <%= form_for [@account, @allowance] do |f| %>
+ <div class="form-group">
+     <%= f.label :amount %>
+     <%= f.number_field :amount, :step => 'any' %>
+ </div>
+
+   <%= f.submit "Submit", class: 'btn btn-primary' %>
+<% end %>

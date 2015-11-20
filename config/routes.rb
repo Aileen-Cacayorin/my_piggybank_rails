@@ -36,6 +36,10 @@ Rails.application.routes.draw do
     resources :transactions
   end
 
+  resources :accounts do
+    resources :allowances
+  end
+
   resources :requests
 end
 

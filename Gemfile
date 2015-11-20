@@ -18,8 +18,8 @@ gem 'mini_magick',             '3.8.0'
 gem "hirb"
 gem "chartkick"
 gem 'groupdate'
-
 gem 'jquery-turbolinks'
+gem 'rufus-scheduler'
 
 group :production do
   gem 'puma'
@@ -49,4 +49,5 @@ group :test do
   gem 'simplecov', require: false
   gem 'poltergeist'
   gem 'database_cleaner', '~> 1.5', '>= 1.5.1'
+  gem 'phantomjs', :require => 'phantomjs/poltergeist'
 end
