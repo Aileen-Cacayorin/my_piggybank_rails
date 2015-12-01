@@ -6,7 +6,13 @@
       <h3>Current balance: <span id="balance"><%=number_to_currency @account.total %></span></h3>
       <h5> Beginning Balance: <%=number_to_currency @account.beginning_balance %></h5>
 
-      <%= link_to "Set up weekly allowance", new_account_allowance_path(@account) %>
+      <% if @allowance %>
+        <p>Weekly allowance: <%=number_to_currency @allowance.amount %></p>
+        <%= link_to "Edit Allowance",  edit_account_allowance_path(@account, @allowance) %>
+      <% else %>
+        <%= link_to "Set up weekly allowance", new_account_allowance_path(@account) %>
+      <% end %>
+
 
       <%= link_to "Make a transaction", new_account_transaction_path(@account, :bank => "#{@child.bank.id}"), id: "new_transaction_link", remote: true %>
       <%= render 'layouts/modal' %>

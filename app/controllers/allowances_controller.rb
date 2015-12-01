@@ -15,6 +15,17 @@ class AllowancesController < ApplicationController
     end
   end
 
+  def edit
+    @allowance = Allowance.find(params[:id])
+    @account = Account.find(params[:account_id])
+  end
+
+  def update
+    @allowance = Allowance.find(params[:id])
+    @account = Account.find(params[:account_id])
+    @allowance.update(allowance_params)
+    redirect_to child_account_path(@account.child, @account)
+  end
 
   private
     def allowance_params
