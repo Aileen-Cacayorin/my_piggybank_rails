@@ -5,14 +5,14 @@
 
   <% if @bank.children.any? %>
   <ul id="child_list">
-    <h3>Children in your Bank:</h3>
+    <h3>Your Children:</h3>
     <%= link_to "Add another child", new_child_registration_path(:bank => @bank.id)   %>
     <% @bank.children.each do |child| %>
       <li><%= child.username %> <span id="show_view_account_<%=child.id%>"></span>
       <% if !child.account %>
         <%= link_to "Start Account", new_child_account_path(child), id: "new_account_#{child.id}", remote: true %>
       <% else %>
-        <%= link_to "View Account", child_account_path(child, child.account), id: "view_account_#{child.id}"  %>
+        <%= link_to "View Account", child_account_path(child, child.account), id: "view_account_#{child.id}" %>
          | <%= link_to "Delete Account", child_path(child, child.account, :parent => child.parent.id),:data => {:confirm => "Are you sure?",
            :method => "delete"}  %>
       <% end %>
