@@ -9,14 +9,14 @@
             <h2><%=@child.first_name.capitalize %>, you have saved</h2>
             <h1><%=number_to_currency @account.total %> !</h1>
             <p> Starting Balance: <%=number_to_currency @account.beginning_balance %> </p>
+            <div id="request_buttons">
+              <p><%= link_to "Save Money", new_request_path(:child => @child.id, :parent => @child.parent.id, :deposit => true), class: "btn btn-success",  remote: true, id: "transaction_request_link" %>
+              <%= link_to "Get Money", new_request_path(:child => @child.id, :parent => @child.parent.id, :withdrawal => true), class: "btn btn-danger", remote: true, id: "transaction_request_link" %></p>
+              <%= render 'layouts/modal' %>
+            </div>
             <div class="transaction_chart">
               <%= render 'accounts/line_chart' %>
             </div>
-          </div>
-          <div id="request_buttons">
-            <p><%= link_to "Save Money", new_request_path(:child => @child.id, :parent => @child.parent.id, :deposit => true), class: "btn btn-success",  remote: true, id: "transaction_request_link" %></p>
-            <p><%= link_to "Get Money", new_request_path(:child => @child.id, :parent => @child.parent.id, :withdrawal => true), class: "btn btn-danger", remote: true, id: "transaction_request_link" %></p>
-            <%= render 'layouts/modal' %>
           </div>
         </div>
         <div class="col-md-7">

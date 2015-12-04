@@ -14,8 +14,12 @@
   margin-left: 25px;
   margin-right: 30px;
   max-width: 30%;
-  padding: 0, 0, 0, 30px;
+  padding: 0 20px;
 
+}
+
+#list_column h1 {
+  text-align: center;
 }
 
 #parent_child_stats_panel {
@@ -23,10 +27,19 @@
   margin-right: 2%
 }
 
+#child_list {
+  padding-left: 0px;
+}
 #child_list li {
   padding: 5px;
 }
 
-#child_list a {
-  text-align: right;
+.child_name {
+  font-size: 1.5em;
+  padding-right: 5px;
+}
+
+.add_child_link {
+  font-size: 1.25em;
+  padding-bottom: 10px;
 }

@@ -1,5 +1,5 @@
 .child_page {
-  background-color: #60CA95;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 0%, rgba(46,209,140,1) 100%);
   height: 100%;
   font-family: 'Wellfleet', cursive;
 }
@@ -13,8 +13,6 @@
 #transaction_chart {
   margin: auto;
   text-align: center;
-
-
 }
 
 #left_column {
@@ -22,6 +20,10 @@
   padding: 20px;
   text-align: center;
   background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  -webkit-box-shadow: 6px 10px 15px 5px rgba(0,0,0,0.55);
+  -moz-box-shadow: 6px 10px 15px 5px rgba(0,0,0,0.55);
+  box-shadow: 6px 10px 15px 5px rgba(0,0,0,0.55);
 }
 
 
@@ -31,19 +33,32 @@
 
 #child_transaction_view {
   background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+  -webkit-box-shadow: 6px 10px 15px 5px rgba(0,0,0,0.55);
+  -moz-box-shadow: 6px 10px 15px 5px rgba(0,0,0,0.55);
+  box-shadow: 6px 10px 15px 5px rgba(0,0,0,0.55);
 }
-
 
 #child_transaction_view .panel {
   background-color: rgba(255, 255, 255, 0.50);
-}
-
-
-#request_buttons {
-  text-align: center;
-  margin-top: 50px;
+  border-radius: 10px;
 }
 
 .child_account_title {
   text-align: center;
+  font-size: 3em;
+}
+
+
+/*request buttons*/
+#request_buttons {
+  text-align: center;
+}
+
+.btn-danger{
+  background-color: #D1472E;
+}
+
+.btn-success {
+  background-color: #198457;
 }

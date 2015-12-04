@@ -9,6 +9,7 @@
 .navbar {
   padding: 20px;
   font-family: 'Wellfleet', cursive;
+  color: #42666B;
 }
 
 .navbar-brand {
@@ -25,6 +26,10 @@
   margin-right: 10px;
 }
 
+body {
+  background-color: #FFFFF7;
+}
+
 #child_list{
   list-style: none;
 }
@@ -34,6 +39,10 @@
 }
 
 /*transaction chart*/
+
+.pagination {
+  margin-left: 3%;
+}
 #transaction_chart {
   height: 400px;
   width: 100%;
