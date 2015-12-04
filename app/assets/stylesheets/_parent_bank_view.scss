@@ -4,6 +4,9 @@
 
 #parent_transactions_list_view {
   margin: auto;
+  -webkit-box-shadow: 10px 10px 19px -5px rgba(0,0,0,0.48);
+  -moz-box-shadow: 10px 10px 19px -5px rgba(0,0,0,0.48);
+  box-shadow: 10px 10px 19px -5px rgba(0,0,0,0.48);
 }
 
 .parent_account_stats {
@@ -15,6 +18,9 @@
   margin-right: 30px;
   max-width: 30%;
   padding: 0 20px;
+  -webkit-box-shadow: 10px 10px 19px -5px rgba(0,0,0,0.48);
+  -moz-box-shadow: 10px 10px 19px -5px rgba(0,0,0,0.48);
+  box-shadow: 10px 10px 19px -5px rgba(0,0,0,0.48);
 
 }
 
@@ -24,7 +30,10 @@
 
 #parent_child_stats_panel {
   margin-left: 3%;
-  margin-right: 2%
+  margin-right: 2%;
+  -webkit-box-shadow: 10px 10px 19px -5px rgba(0,0,0,0.48);
+  -moz-box-shadow: 10px 10px 19px -5px rgba(0,0,0,0.48);
+  box-shadow: 10px 10px 19px -5px rgba(0,0,0,0.48);
 }
 
 #child_list {
