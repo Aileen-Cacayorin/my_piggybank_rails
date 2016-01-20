@@ -9,7 +9,7 @@ To see parent features, login with the username: janedoe, password: password.
 
 To see child features, login with username: averydoe, passowrd: averydoe.
 
-**Note: Integration tests are currently not passing. Factory girl gem needs to be installed and configured but we ran out of time. Also it's kind of tricky. We are accepting pull requests that have factory girl properly installed, configured, and updated passing integration specs. Thanks in advance! ;)
+
 
 ## Installation
 
