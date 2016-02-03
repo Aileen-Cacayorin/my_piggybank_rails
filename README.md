@@ -25,6 +25,16 @@ To see child features, login with username: averydoe, passowrd: averydoe.
 * Visit the app at [http://localhost:3000](http://localhost:3000). 
 * OR visit the app at [https://my-piggy-bank.herokuapp.com/]
 
+
+### What's Next:
+* Edit and delete user profiles
+* Password recovery
+* Automated transactions for allowance
+* Compound Interest
+* Transaction tags and sorting
+* A Chores feature that allows parents to create a list of chores that can be completed for money. Children will be able to sign up for chores, notify the parent when te chore is completed, and parents can automatically deposit the money into the child's account.
+* Display transaction history graphs by week, month, year.
+
 ### Technologies Used
 
 * Language: Ruby
@@ -37,14 +47,6 @@ To see child features, login with username: averydoe, passowrd: averydoe.
 * Front-End: Bootstrap/jQuery
 * APIs: Google Charts
 
-### Features to Add
-* Edit and delete user profiles
-* Password recovery
-* Automated transactions for allowance
-* Compound Interest
-* Transaction tags and sorting
-* A Chores feature that allows parents to create a list of chores that can be completed for money. Children will be able to sign up for chores, notify the parent when te chore is completed, and parents can automatically deposit the money into the child's account.
-* Display transaction history graphs by week, month, year.
 
 
 
