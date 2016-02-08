@@ -9,6 +9,8 @@ To see parent features, login with the username: janedoe, password: password.
 
 To see child features, login with username: averydoe, passowrd: averydoe.
 
+This project is ongoing. To view progress check out the project Trello board: https://trello.com/b/mz0VR6hM/my-piggybank
+
 
 
 ## Installation
