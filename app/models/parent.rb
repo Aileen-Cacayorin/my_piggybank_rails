@@ -3,7 +3,7 @@ class Parent < ActiveRecord::Base
 
   has_one :bank, dependent: :destroy
   has_many :requests, dependent: :destroy
-
+  has_many :chores, :through => :bank
 
   validates :first_name, :presence => true
   validates :last_name, :presence => true

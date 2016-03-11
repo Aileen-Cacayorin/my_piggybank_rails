@@ -145,8 +145,8 @@
         null,
         null,
         1,
-        33,
-        33,
+        40,
+        40,
         null,
         null,
         null,
@@ -712,7 +712,7 @@
         null,
         1,
         1,
-        null,
+        1,
         null,
         1,
         1,
@@ -734,6 +734,7 @@
         null
       ],
       "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/models/child.rb": [
+        1,
         1,
         1,
         1,
@@ -1543,7 +1544,19 @@
         1,
         1,
         1,
+        1,
         null,
+        1,
+        null,
+        null
+      ],
+      "/Users/aileencacayorin/Desktop/my_piggybank_rails/app/models/chore.rb": [
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
         1,
         null,
         null
@@ -1673,7 +1686,6 @@
         null,
         1,
         1,
-        1,
         null,
         1,
         1,
@@ -1719,6 +1731,7 @@
         2,
         2,
         2,
+        2,
         null
       ],
       "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/models/child_spec.rb": [
@@ -1728,12 +1741,24 @@
         2,
         2,
         2,
+        2,
+        null
+      ],
+      "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/models/chore_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
         null
       ],
       "/Users/aileencacayorin/Desktop/my_piggybank_rails/spec/models/parent_spec.rb": [
         1,
         null,
         1,
+        2,
         2,
         2,
         2,
@@ -1785,6 +1810,6 @@
         null
       ]
     },
-    "timestamp": 1457666940
+    "timestamp": 1457670365
   }
 }

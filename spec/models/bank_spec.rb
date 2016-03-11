@@ -5,4 +5,5 @@ describe Bank do
  it { should have_many :children}
  it { should validate_presence_of :name }
  it { should have_many :transactions}
+ it { should have_many :chores }
 end

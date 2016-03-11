@@ -8,7 +8,6 @@ describe "the add transaction path", js: true do
 
     click_on "View Account"
     sleep 6
-    save_and_open_page
 
     click_link "new_transaction_link"
     fill_in "Description", with: "Chores"
