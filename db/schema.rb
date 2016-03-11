@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112193443) do
+ActiveRecord::Schema.define(version: 20160311031847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,16 @@ ActiveRecord::Schema.define(version: 20151112193443) do
 
   add_index "children", ["reset_password_token"], name: "index_children_on_reset_password_token", unique: true, using: :btree
   add_index "children", ["username"], name: "index_children_on_username", unique: true, using: :btree
+
+  create_table "chores", force: :cascade do |t|
+    t.integer "bank_id"
+    t.integer "child_id"
+    t.string  "description"
+    t.decimal "pay",         precision: 10, scale: 2
+    t.boolean "available",                            default: true
+    t.boolean "complete",                             default: false
+    t.boolean "paid",                                 default: false
+  end
 
   create_table "parents", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
