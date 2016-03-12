@@ -17,12 +17,10 @@ class ChoresController < ApplicationController
   def create
     @chore = Chore.create(chore_params)
     @chore.bank = @bank
-    if @chore.save
-      flash[:success] = "Your chore was created!"
-      redirect_to parent_bank_path(@parent, @bank)
-    else
-      flash[:danger] = "Something went wrong."
-      redirect_to :back
+    @chore.save
+    respond_to do |format|
+    format.html { redirect_to parent_bank_path(@parent, @bank)}
+    format.js
     end
   end
 

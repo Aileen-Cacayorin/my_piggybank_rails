@@ -12,9 +12,6 @@ class AccountsController < ApplicationController
     @account = Account.create(account_params)
     @account.child = @child
     @account.save
-    respond_to do |format|
-    format.html { redirect_to parent_bank_path(@parent, @bank)}
-    format.js
     end
   end
 
