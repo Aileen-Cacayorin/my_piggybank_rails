@@ -1,0 +1,10 @@
+<div class="panel panel-default" id="chore_list">
+  <% if @chores.any? %>
+    <h2>This is the chore list</h2>
+
+  <% else %>
+  <p> You don't have any chores. Help your children earn money by creating household chores and tasks.
+  </p>
+  <% end %>
+  <%= link_to "Add a chore", new_bank_chore_path(@parent) %>
+</div>

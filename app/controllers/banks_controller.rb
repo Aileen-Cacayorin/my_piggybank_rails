@@ -23,6 +23,7 @@ class BanksController < ApplicationController
     @bank = Bank.find(params[:id]) || Bank.find(params[:current_parent_id])
     @children = @bank.children
     @requests = @bank.parent.requests
+    @chores = @bank.chores
     @chart_children = @children.select {|child| child.account.present? == true}
   end
 

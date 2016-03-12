@@ -27,6 +27,10 @@ Rails.application.routes.draw do
     resources :children
   end
 
+  resources :banks do
+    resources :chores
+  end
+
   resources :children do
     resources :accounts
 

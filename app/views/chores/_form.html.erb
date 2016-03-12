@@ -1,0 +1,16 @@
+<%= render 'layouts/errors', :object => @chore %>
+
+<%= form_for [@bank, @chore] do |f| %>
+<div class="form-group">
+    <%= f.label :description, "Chore description" %>
+    <%= f.text_field :description %>
+</div>
+<div class="form-group">
+    <%= f.label :pay, "How much does it pay? $" %>
+    <%= f.number_field :pay, :step => 'any' %>
+</div>
+
+<div class="form-group">
+  <%= f.submit "Add Chore" %>
+</div>
+<% end %>
