@@ -25,6 +25,10 @@ class BanksController < ApplicationController
     @requests = @bank.parent.requests
     @chores = @bank.chores
     @chart_children = @children.select {|child| child.account.present? == true}
+    respond_to do |format|
+    format.html
+    format.js
+    end
   end
 
   private
