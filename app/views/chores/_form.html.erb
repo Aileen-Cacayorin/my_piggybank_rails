@@ -6,8 +6,18 @@
     <%= f.text_field :description %>
 </div>
 <div class="form-group">
-    <%= f.label :pay, "How much does it pay? " %>
+    <%= f.label :pay, "How much does it pay? $" %>
     <%= f.number_field :pay, :step => 'any' %>
+</div>
+
+<div class="form-group">
+    <%= f.label :child_id, "Assign to child? " %>
+    <%= f.select(:child_id) do %>
+      <%= content_tag(:option, "Leave Unassigned", value: " ") %>
+      <% @bank.children.each do |child| %>
+        <%= content_tag(:option, child.first_name, value: child.id) %>
+      <% end %>
+    <% end %>
 </div>
 
 <div class="form-group">

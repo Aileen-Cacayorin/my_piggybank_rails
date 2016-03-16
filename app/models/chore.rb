@@ -6,4 +6,7 @@ class Chore < ActiveRecord::Base
   validates :description, :presence => true
   validates :pay, :presence => true
 
+
+
+
 end

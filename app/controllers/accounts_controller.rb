@@ -12,7 +12,6 @@ class AccountsController < ApplicationController
     @account = Account.create(account_params)
     @account.child = @child
     @account.save
-    end
   end
 
   def show

@@ -6,4 +6,11 @@ class Bank < ActiveRecord::Base
 
   validates :name, :presence => true
 
+  def available_chores
+    return Chore.where(:bank_id => self.id, :available => true)
+  end
+
+  def assigned_chores
+    return Chore.where(:bank_id => self.id, :available => false)
+  end
 end

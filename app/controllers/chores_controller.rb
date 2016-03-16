@@ -15,7 +15,11 @@ class ChoresController < ApplicationController
   end
 
   def create
+    binding.pry
     @chore = Chore.create(chore_params)
+    if chore_params[:child_id] != " "
+      @chore.available = false
+    end
     @chore.bank = @bank
     @chore.save
     respond_to do |format|
@@ -35,7 +39,7 @@ class ChoresController < ApplicationController
 
   private
   def chore_params
-    params.require(:chore).permit(:description, :pay)
+    params.require(:chore).permit(:description, :pay, :child_id)
   end
 
   def set_default
